@@ -1,14 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ФрешОк магазин свежих продуктов | главная страница</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <ul class="header__connection">
+            <li class="header__connection-item">
+              <a class="header__connection-link header__delivery" href="#">
+                АДРЕС И ВРЕМЯ ДОСТАВКИ
+              </a>
+            </li>
+
+            <li class="header__connection-item">
+              <a class="header__connection-link header__phone" href="tel:+380505050505">
+                ГОРЯЧАЯ ЛИНИЯ 24/7
+              </a>
+            </li>
+          </ul>
+
+          <ul class="header__information">
+            <li class="header__information-item">
+              <a href="" class="header__information-link">
+                ДОСТАВКА
+              </a>
+            </li>
+
+            <li class="header__information-item">
+              <a href="" class="header__information-link">
+                О НАС
+              </a>
+            </li>
+
+            <li class="header__information-item">
+              <a href="" class="header__information-link">
+                НОВОСТИ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__content">
+      <div class="container">
+        <div class="header__content-inner">
+          <a class="header__logo logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="лого магазина фрешок">
+          </a>
+
+          <div class="header__content-catalog">
+            <div class="header__select">
+              Каталог продуктов
+              <!-- <ul class="header__select-menu">
+                <li class="header__select-item">
+                  <a class="header__select-link" href="#">
+                    Овощи
+                  </a>
+                </li>
+                <li class="header__select-item">
+                  <a class="header__select-link" href="#">
+                    Фрукты
+                  </a>
+                </li>
+                <li class="header__select-item">
+                  <a class="header__select-link" href="#">
+                    Напитки
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+            <button class="header__select-button" type="button"></button>
+          </div>
+
+          <form class="header__form form">
+            <label class="form__label" for="product-search">ввести наименование товара</label>
+            <input class="form__input " type="search" id="product-search" name="product-search"
+              placeholder="Найти в магазине ..." required>
+            <button class="form__submit-btn" type="submit">
+              поиск
+            </button>
+          </form>
+
+
+          <ul class="header__usernav">
+            <li class="header__usernav-item">
+              <a class="header__usernav-link" style="background-image: url('../images/icons/user.svg')" href="#">
+              </a>
+            </li>
+
+            <li class="header__usernav-item">
+              <a class="header__usernav-link" style="background-image: url('../images/icons/heart.svg')" href=" #">
+                <span class="header__usernav-number">12</span>
+              </a>
+            </li>
+
+            <li class="header__usernav-item">
+              <a class="header__usernav-link" style="background-image: url('../images/icons/cart.svg')" href="#">
+                <span class="header__usernav-number">12</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
