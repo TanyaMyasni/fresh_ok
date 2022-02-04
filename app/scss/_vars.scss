@@ -11,7 +11,18 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white:      #FFFFFF;
 
-
+%btn {
+  display: inline-block;
+  padding: 11px 23px;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: $white;
+  background-color: $green-900;
+  border: 1px solid $green-900;
+  border-radius: 6px;
+}
 
 
 
