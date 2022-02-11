@@ -1,0 +1,45 @@
+$green-900:  #63A60F;
+$green-200:  #E0EDCF;
+$green-100:  #EFF6E7;
+$dark-900:   #121212;
+$dark-800:   #31352B;
+$dark-500:   #505050;
+$red-900:    #CF3E3B;
+$orange-900: #FF7A00;
+$yellow-900: #FFB800;
+$silver-600: #C1C1C1;
+$silver-100: #F6F6F6;
+$white:      #FFFFFF;
+
+%btn {
+  display: inline-block;
+  padding: 11px 23px;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: $white;
+  background-color: $green-900;
+  border: 1px solid $green-900;
+  border-radius: 6px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  outline: transparent;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px $green-200;
+  }
+
+  &:hover {
+    background-color: #4D810C;
+  }
+
+  &:active {
+    color: rgba($white, 0.5);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+
+
+
