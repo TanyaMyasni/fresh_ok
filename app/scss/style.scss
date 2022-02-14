@@ -115,6 +115,11 @@
     color: $green-900;
     background-color: $white;
 
+    &--active {
+      border-radius: 6px 6px 0 0;
+      background-color: $green-200;
+    }
+
     &::before {
       content: "";
       top: 16px;
@@ -131,11 +136,8 @@
 
   &__content-catalog:hover {
     background-color: $green-200;
+    
   }
-
-  &__select {}
-
-  &__select-menu {}
 
   &__select-button {
     width: 30px;
@@ -145,7 +147,61 @@
     background-position: center;
     background-size: auto;
     outline: transparent;
+
+    &--active {
+      transform: rotate(180deg);
+    }
   }
+
+
+  &__select-menu {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    background-color: $white;
+    border: 1px solid rgba($silver-600, 0.3);
+    border-radius: 0 0 6px 6px;
+    transform: translateY(-200%);
+    transition: transform 0.5s;
+    z-index: 1;
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+  &__select-item {
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__select-link {
+    position: relative;
+    display: block;
+    padding: 15px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    transition: box-shadow 0.3s, color 0.3s;
+
+    &:hover {
+      color: $green-900;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 3px 0 0 0 $green-900;
+      }
+    }
+  }
+
+  
 
   .form {
     position: relative;
@@ -304,7 +360,7 @@
 .offers {
   position: relative;
 
-  &__btn {
+  &__slider-btn {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -411,11 +467,340 @@
     margin-bottom: 32px;
     font-size: 16px;
     font-weight: 400;
+  }
+}
 
+.services {
+  padding: 48px 0 29px;
+  background-color: $silver-100;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 65px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 264px;
+    width: 100%;
+    padding: 0 15px 0 75px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--scooter {
+      &::before {
+        background-image: url("../images/sprite.svg#icon-scooter");
+      }
+    }
+
+    &--return {
+      &::before {
+        background-image: url("../images/sprite.svg#icon-return");
+      }
+    }
+
+    &--hours {
+      &::before {
+        background-image: url("../images/sprite.svg#icon-hours");
+      }
+    }
+
+    &-title {
+      margin-bottom: 7px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    &-text {
+      font-weight: 4;
+      font-size: 14px;
+      color: $dark-500;
+    }
+  }
+}
+
+.top-products {
+  padding: 72px 0 72px;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__filter {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__filter-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__filter-btn {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+    text-transform: uppercase;
+    outline: transparent;
+    transition: box-shadow 0.3s, color 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      box-shadow: none;
+      color: $green-900;
+    }
+  }
+
+  &__cards {
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__showmore-btn {
+    display: block;
+    margin: 0 auto;
+    color: $green-900;
+    background-color: $white;
+
+    &:hover {
+      box-shadow: none;
+      background-color: $green-100;
+    }
+
+    &:active {
+      color: rgba($green-900, 0.5);
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.card {
+  max-width: 300px;
+  height: 409px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+
+  &__top {
+    padding: 12px 6px 2px 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: none;
+    width: fit-content;
+    padding: 3px 6px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white;
+
+    &--new {
+      display: block;
+      background-color: $green-900;
+    }
+
+    &--hit {
+      display: block;
+      background-color: $orange-900;
+    }
+
+    &--sale {
+      display: block;
+      background-color: $red-900;
+    }
+  }
+
+  &__like-btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    outline: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: 6px;
+      width: 32px;
+      height: 28px;
+      mask-image: url('../images/sprite.svg#icon-heart');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $silver-600;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &::before {
+        background-color: $yellow-900;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+
+      &::before {
+        background-color: rgba($yellow-900, 0.5);
+      }
+    }
   }
 
   &__link {
-    @extend %btn
+    display: block;
+    position: relative;
+    max-width: 100%;
+    transition: opacity 0.3s;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: inset 0 0 0 100vh rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 85px;
+      left: calc(50% - 22px);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: $white;
+      background-image: url("../images/sprite.svg#icon-greensearch");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+  }
+  
+  &__img {
+    object-fit: contain;
+  }
+
+  &__bottom {
+    height: 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px;
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    &--old {
+      display: inline-block;
+      position: relative;
+      color: $silver-600;
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid $silver-600;
+        width: 100%;
+        height: 50%;
+        transform: rotate(-12.5deg);
+      }
+    }
+  }
+
+  &__cart-btn {
+    position: relative;
+    padding: 0;
+    border: none;
+    align-self: end;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 16px;
+      height: 16px;
+      mask-image: url('../images/sprite.svg#icon-cart');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $white;
+    }
+
+    &:active {
+
+      &::before {
+        background-color: rgba($white, 0.5);
+      }
+    }
   }
 }
 
@@ -465,7 +850,6 @@
   }
 
   &__btn {
-    @extend %btn;
     padding: 12px 16px;
     font-weight: 700;
     font-size: 12px;
@@ -487,6 +871,8 @@
   &__contact-link {
     display: block;
     margin-bottom: 18px;
+    font-weight: 400;
+    line-height: 1.4;
 
     &:focus {
       box-shadow: 0px 0px 0px 3px $green-100;
@@ -502,6 +888,12 @@
       box-shadow: none;
     }
   }
+
+   &__link {
+     &--promo {
+       line-height: 1;
+     }
+   }
 
 
   &__social {
@@ -540,7 +932,7 @@
 }
 
 .footer-bottom {
-  padding: 24px 0 29px;
+  padding: 20px 0 22px;
   border-top: 1px solid $dark-500;
 
   &__container {
@@ -555,7 +947,7 @@
   }
 
   &__paycard:not(:last-child) {
-    padding-right: 24px;
+    padding-right: 20px;
   }
 
   &__paycard {
