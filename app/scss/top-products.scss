@@ -1,0 +1,26 @@
+.top-products {
+  padding: 72px 0 72px;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__filter {
+    margin-bottom: 48px;
+  }
+
+  &__cards {
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+

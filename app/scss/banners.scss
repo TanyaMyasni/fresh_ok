@@ -1,0 +1,61 @@
+.banners {
+  padding-bottom: 72px;
+  
+
+  &__list {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+
+  }
+
+  &__item {
+    padding: 76px 32px;
+    color: $dark-500;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 4px;
+
+    &--white {
+      color: $white;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__item-subtitle {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    
+  }
+
+  &__item-title {
+    max-width: 360px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: normal;
+    border-bottom: 2px solid $dark-500;
+    transition: border-color 0.3s;
+
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &--white {
+      border-bottom: 2px solid $white;
+    }
+  }
+}

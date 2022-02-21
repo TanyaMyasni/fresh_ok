@@ -9,6 +9,7 @@
   "author": "Totty",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -22,5 +23,8 @@
     "mixitup": "^3.3.1",
     "sass": "^1.49.0",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "swiper": "^8.0.6"
   }
 }
