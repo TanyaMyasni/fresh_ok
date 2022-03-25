@@ -1,10 +1,7 @@
 .product-card {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-
-
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   position: relative;
   padding-top: 56px;
@@ -22,7 +19,9 @@
 
   &__favorites {
     position: absolute;
-    top: 12px;
+    display: flex;
+    justify-content: flex-end;
+    top: 17px;
     right: 12px;
     width: 44px;
     height: 44px;
@@ -30,18 +29,12 @@
 
     &::before {
       content: "";
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      left: 0;
-      right: 0;
-      margin: 0 auto;
       width: 32px;
-      height: 28px;
+      height: 30px;
       mask-image: url('../images/sprite.svg#icon-heart');
       mask-repeat: no-repeat;
       mask-position: center;
-      mask-size: contain;
+      mask-size: cover;
       background-color: $silver-600;
       transition: background-color 0.3s;
     }
@@ -129,16 +122,46 @@
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
-    padding: 9px 18px 18px;
+    padding: 20px 18px 18px;
   }
 
   &__name {
+    padding-bottom: 9px;
+    flex-grow: 1;
     @include line-clamp(3);
+  }
+
+  &__availability-list {
+    margin-bottom: 4px;
+  }
+
+  &__availability-item {
+    display: none;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &--available {
+      color: $green-800;
+    }
+
+    &--not-available {
+      color: $silver-600;
+    }
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--on {
+      display: block;
+    }
   }
 
   &__footer {
     display: flex;
     justify-content: space-between;
+    color: $dark-500;
   }
 
   &__cart {
@@ -169,6 +192,29 @@
       &::before {
         background-color: rgba($white, 0.5);
       }
+    }
+  }
+
+  &__rating {
+    position: relative;
+    display: inline-block;
+    align-self: end;
+    padding: 1px 18px 1px 0;
+    font-weight: 700;
+    line-height: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      mask-image: url('../images/sprite.svg#icon-star');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $yellow-900;
     }
   }
 }
@@ -211,9 +257,9 @@
 }
 
 .prices {
- display: flex;
- flex-direction: column;
- justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__item {
     width: fit-content;

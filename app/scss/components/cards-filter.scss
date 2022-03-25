@@ -16,6 +16,7 @@
     text-transform: uppercase;
     outline: transparent;
     transition: color 0.3s;
+    letter-spacing: 0.03em;
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
