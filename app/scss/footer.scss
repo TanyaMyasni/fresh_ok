@@ -19,7 +19,7 @@
   }
 
   &__subscribe-text {
-    padding-bottom: 15px;
+    padding-bottom: 11px;
   }
 
   &__content {
@@ -28,10 +28,8 @@
   }
 
   &__items {
-    // margin-right: -73px;
     column-count: 3;
     column-gap: 75px;
-    // column-width: length($list: 3);
   }
 
   &__item {
