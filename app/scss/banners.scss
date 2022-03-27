@@ -6,9 +6,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 30px;
-    // display: flex;
-    // justify-content: space-between;
-
   }
 
   &__item {
@@ -41,6 +38,7 @@
     font-size: 30px;
     font-weight: 400;
     text-align: left;
+    @include line-clamp(2);
   }
 
   &__link {

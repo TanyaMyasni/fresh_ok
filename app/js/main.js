@@ -12,6 +12,13 @@ $(function () {
     // autoplay: true
   });
 
+  $('.brends-slider__list').slick({
+    arrows: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+  });
+
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
