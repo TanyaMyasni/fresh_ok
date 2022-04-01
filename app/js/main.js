@@ -19,6 +19,19 @@ $(function () {
     slidesToScroll: 2,
   });
 
+  $('.user-nav__link--cart').on('click', function () {
+    $('.overlay').toggleClass('is-open');
+    $('.basket__close-btn').addClass('is-open');
+    $('body').toggleClass('lock');
+  })
+
+  $('.basket__close-btn').on('click', function () {
+    $('.basket__close-btn').removeClass('is-open');
+    $('.overlay').removeClass('is-open');
+    $('body').removeClass('lock');
+  })
+  
+
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
 

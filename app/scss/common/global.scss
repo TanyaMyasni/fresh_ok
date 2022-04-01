@@ -104,4 +104,45 @@ body {
   }
 }
 
+.close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    outline: transparent;
+
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      mask-image: url('../images/sprite.svg#icon-close1');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $black;
+      transition: background-color 0.3s;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover {
+      box-shadow: none;
+      background-color: $green-100;
+
+      &::before {
+        background-color: $green-800;
+      }
+    }
+
+    &:active {
+      background-color: rgba($silver-600, 0.3);
+      box-shadow: none;
+    }
+  }
+
 

@@ -168,6 +168,79 @@
         </div>
       </div>
     </nav>
+
+    <div class="header__overlay overlay">
+      <div class="overlay__basket basket">
+        <div class="basket__top">
+          <div class="basket__title-wrap">
+            <h2 class="basket__title">Корзина</h2>
+
+            <button class="basket__clean-btn" type="button">очистить корзину</button>
+          </div>
+
+          <button class="basket__close-btn close-btn"></button>
+        </div>
+
+        <ul class="basket__cards">
+          <li class="basket__card basket-card">
+            <img class="basket-card__img" src="images/products/ananas-100.jpg" width="60" height="60" alt="ананас">
+
+            <div class="basket-card__info">
+              <h3 class="basket-card__name">
+                <a class="basket-card__link" href="#">Ананас, 1кг</a>
+              </h3>
+              <div class="basket-card__price number">999<span class="basket__currency">₽</span> </div>
+            </div>
+
+            <div class="basket-card__counter">
+              <button class="basket-card__minus-btn btn" type="button"></button>
+
+              <label for="basket-quantity"></label>
+              <input class="basket-card__quantity" type="text" id="basket-quantity" value="2">
+
+              <button class="basket-card__plus-btn btn" type="button"></button>
+            </div>
+
+            <div class="basket-card__total-price number">1998<span class="basket__currency">₽</span><div>
+
+            <button class="basket-card__delete-btn close-btn" type="button"></button>
+          </li>
+
+          <li class="basket__card basket-card">
+            <img class="basket-card__img" src="images/products/pitahaja.jpg" width="60" height="60" alt="ананас">
+
+            <div class="basket-card__info">
+              <h3 class="basket-card__name">
+                <a class="basket-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+              </h3>
+              <div class="basket-card__price number">1019<span class="basket__currency">₽</span> </div>
+            </div>
+
+            <div class="basket-card__counter">
+              <button class="basket-card__minus-btn btn" type="button"></button>
+
+              <label for="basket-quantity"></label>
+              <input class="basket-card__quantity" type="text" id="basket-quantity" value="2">
+
+              <button class="basket-card__plus-btn btn" type="button"></button>
+            </div>
+
+            <div class="basket-card__total-price number">2038<span class="basket__currency">₽</span>
+            <div>
+
+            <button class="basket-card__delete-btn close-btn" type="button"></button>
+          </li>
+        </ul>
+
+        <div class="basket__bottom">
+          <h2 class="basket__title">Товаров на сумму</h2>
+
+          <div class="basket__total-sum number">2038<span class="basket__currency">₽</span></div>
+        </div>
+
+        <button class="basket__order-btn" type="button">Оформить заказ</button>
+      </div>
+    </div>
   </header>
 
   <main class="main">
@@ -549,7 +622,7 @@
               <div class="product-card__info">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный
-                  апельсин безалкогольный</a>
+                    апельсин безалкогольный</a>
                 </h3>
 
                 <div class="product-card__footer">
@@ -739,8 +812,8 @@
                 <li class="badges__item badges__item--sale ">-50%</li>
               </ul>
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/ananas-100.jpg"
-                alt="кофе с коноплей">
+              <img class="promotions__card product-card__img" width="100" height="100"
+                src="images/products/ananas-100.jpg" alt="кофе с коноплей">
 
               <div class="promotions__card product-card__info">
                 <h3 class="promotions__card product-card__name">
@@ -844,8 +917,8 @@
               </ul>
 
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/strawberry.jpg"
-                alt="спелая ароматная клубника">
+              <img class="promotions__card product-card__img" width="100" height="100"
+                src="images/products/strawberry.jpg" alt="спелая ароматная клубника">
 
 
               <div class="promotions__card product-card__info">
@@ -854,12 +927,12 @@
                 </h3>
 
                 <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available">
+                  <li
+                    class="promotions__card product-card__availability-item product-card__availability-item--available">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item
+                  <li class="promotions__card product-card__availability-item
                     product-card__availability-item--not-available product-card__availability-item--on">
                     нет в наличии
                   </li>
@@ -1000,8 +1073,8 @@
               </ul>
 
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/vegetables-juice.jpg"
-                alt="овощной сок">
+              <img class="promotions__card product-card__img" width="100" height="100"
+                src="images/products/vegetables-juice.jpg" alt="овощной сок">
 
 
               <div class="promotions__card product-card__info">
@@ -1010,7 +1083,8 @@
                 </h3>
 
                 <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available">
+                  <li
+                    class="promotions__card product-card__availability-item product-card__availability-item--available">
                     в наличии
                   </li>
 
@@ -1053,8 +1127,8 @@
               </ul>
 
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/fruit-basket.jpg"
-                alt="Фруктовая корзина">
+              <img class="promotions__card product-card__img" width="100" height="100"
+                src="images/products/fruit-basket.jpg" alt="Фруктовая корзина">
 
 
               <div class="promotions__card product-card__info">
