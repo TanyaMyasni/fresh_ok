@@ -1,29 +1,36 @@
 .banners {
   padding-bottom: 75px;
   
-
   &__list {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 630px 1fr 1fr;
     gap: 30px;
   }
 
   &__item {
     padding: 78px 32px 74px;
     color: $dark-500;
+    letter-spacing: normal;
     text-transform: uppercase;
     background-repeat: no-repeat;
-    background-size: containe;
+    background-size: contain;
     background-position: center center;
     border-radius: 4px;
 
     &--white {
       color: $white;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+
+      .banners {
+        &__link {
+          color: $white;
+          border-bottom: 2px solid $white;
+        }
+      }
     }
   }
 
-  &__item-subtitle {
+  &__subtitle {
     padding-bottom: 18px;
     font-weight: 700;
     font-size: 12px;
@@ -32,11 +39,13 @@
     
   }
 
-  &__item-title {
-    max-width: 70%;
+  &__title {
+    max-width: 75%;
     margin-bottom: 5px;
+    font-family: 'Ruda';
+    font-weight: 600;
     font-size: 30px;
-    font-weight: 400;
+    text-transform: uppercase;
     text-align: left;
     @include line-clamp(2);
   }
@@ -54,10 +63,6 @@
 
     &:hover {
       border-color: transparent;
-    }
-
-    &--white {
-      border-bottom: 2px solid $white;
     }
   }
 }

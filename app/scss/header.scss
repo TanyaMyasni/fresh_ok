@@ -345,15 +345,16 @@
 
   &__number {
     position: absolute;
-    padding: 0 3px;
-    display: block;
+    padding: 2px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     min-width: 18px;
     height: 18px;
-    border-radius: 50%;
+    border-radius: 15px;
     font-size: 10px;
-    line-height: 18px;
     text-align: center;
     color: #CF3E3B;
     background-color: $white;

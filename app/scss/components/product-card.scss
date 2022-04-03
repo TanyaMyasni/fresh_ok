@@ -15,16 +15,16 @@
     border-color: $green-900;
   }
 
-  &__badges {}
-
   &__favorites {
     position: absolute;
     display: flex;
-    justify-content: flex-end;
-    top: 17px;
-    right: 12px;
+    justify-content: center;
+    align-items: center;
+    top: 11px;
+    right: 5px;
     width: 44px;
     height: 44px;
+    z-index: 2;
     outline: transparent;
 
     &::before {
@@ -100,8 +100,8 @@
       transition: opacity 0.3s, box-shadow 0.3s;
     }
 
+    &:focus,
     &:hover {
-
       &::before,
       &::after {
         opacity: 1;
@@ -131,36 +131,9 @@
     font-size: 14px;
     font-weight: 600;
   }
-  
+
   &__link {
     @include line-clamp(3);
-  }
-
-  &__availability-list {
-    margin-bottom: 4px;
-  }
-
-  &__availability-item {
-    display: none;
-    font-size: 10px;
-    line-height: 1;
-    text-transform: uppercase;
-
-    &--available {
-      color: $green-800;
-    }
-
-    &--not-available {
-      color: $silver-600;
-    }
-
-    &--ends {
-      color: $red-900;
-    }
-
-    &--on {
-      display: block;
-    }
   }
 
   &__footer {
@@ -193,7 +166,6 @@
     }
 
     &:active {
-
       &::before {
         background-color: rgba($white, 0.5);
       }
@@ -261,6 +233,33 @@
   }
 }
 
+.presence {
+  margin-bottom: 4px;
+
+  &__item {
+    display: none;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &--is {
+      color: $green-800;
+    }
+
+    &--not {
+      color: $silver-600;
+    }
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--on {
+      display: block;
+    }
+  }
+}
+
 .prices {
   display: flex;
   flex-direction: column;
@@ -273,7 +272,6 @@
     line-height: 1;
 
     &--old {
-
       position: relative;
       color: $silver-600;
 

@@ -4,16 +4,12 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    align-items: center;
+    margin-bottom: 30px;
   }
 
-  &__link-item {
-    align-self: center;
+  &__top-link {
     margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
-  &__link {
     padding-bottom: 2px;
     border-bottom: 2px solid $green-800;
     font-size: 14px;
@@ -45,19 +41,18 @@
 
   &__cards {
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 
   &__card {
     position: relative;
-    max-width: 410px;
-    width: 100%;
+    overflow: hidden;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
   }
 
-  &__card-date {
+  &__date {
     position: absolute;
     top: 0;
     left: 20px;
@@ -70,38 +65,43 @@
     text-align: center;
     letter-spacing: 0.1em;
     border-radius: 0 0 4px 4px;
-
-    & span {
-      display: block;
-      margin-top: 4px;
-      font-family: 'Ruda';
-      font-weight: 600;
-      font-size: 30px;
-      line-height: 1;
-      text-align: center;
-      text-transform: uppercase;
-    }
   }
 
-  &__card-img {
-    object-fit: contain;
+  &__day {
+    display: block;
+    margin-top: 4px;
+    font-family: 'Ruda';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
   }
 
-  &__card-name {
+  &__img {
+    object-fit: cover;
+  }
+
+  &__wrap {
     padding: 18px;
+  }
+  
+  &__name {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: normal;
-    
-  }
-
-  &__card-link {
     transition: color 0.3s;
+    @include line-clamp(5);
 
     &:hover {
       color: $green-800;
     }
+    
+  }
+
+  &__link {
+    outline: transparent;
   }
 
 }

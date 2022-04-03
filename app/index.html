@@ -201,9 +201,10 @@
               <button class="basket-card__plus-btn btn" type="button"></button>
             </div>
 
-            <div class="basket-card__total-price number">1998<span class="basket__currency">₽</span><div>
+            <div class="basket-card__total-price number">1998<span class="basket__currency">₽</span>
+              <div>
 
-            <button class="basket-card__delete-btn close-btn" type="button"></button>
+                <button class="basket-card__delete-btn close-btn" type="button"></button>
           </li>
 
           <li class="basket__card basket-card">
@@ -226,9 +227,9 @@
             </div>
 
             <div class="basket-card__total-price number">2038<span class="basket__currency">₽</span>
-            <div>
+              <div>
 
-            <button class="basket-card__delete-btn close-btn" type="button"></button>
+                <button class="basket-card__delete-btn close-btn" type="button"></button>
           </li>
         </ul>
 
@@ -735,15 +736,14 @@
 
     <section class="banners">
       <div class="banners__container container">
-        <h2 class="sr-only">Актальные предложения по категориям товаров.</h2>
+        <h2 class="sr-only">Актуальные предложения по категориям товаров.</h2>
 
         <ul class="banners__list">
-          <li class="banners__item banners__item--white"
-            style="background-image: url('images/banners/bg-fruit.jpg'); width: 630px;">
-            <p class="banners__item-subtitle">свежайшие фрукты</p>
+          <li class="banners__item banners__item--white" style="background-image: url('images/banners/bg-fruit.jpg');">
+            <p class="banners__subtitle">свежайшие фрукты</p>
 
-            <h3 class="banners__item-title title">
-              начни фруктовое лето всего от 99 <span class="banners__currency">₽</span>
+            <h3 class="banners__title">
+              начни фруктовое лето всего от 99 ₽
             </h3>
 
             <a class="banners__link banners__link--white" href="#">
@@ -752,9 +752,9 @@
           </li>
 
           <li class="banners__item" style="background-image: url('images/banners/bg-vegetables.jpg');">
-            <p class="banners__item-subtitle">сезонная распродажа</p>
+            <p class="banners__subtitle">сезонная распродажа</p>
 
-            <h3 class="banners__item-title title">
+            <h3 class="banners__title">
               овощепад до -50%
             </h3>
 
@@ -764,9 +764,9 @@
           </li>
 
           <li class="banners__item" style="background-image: url('images/banners/bg-bread.jpg');">
-            <p class="banners__item-subtitle">ням-ням</p>
+            <p class="banners__subtitle">ням-ням</p>
 
-            <h3 class="banners__item-title title">
+            <h3 class="banners__title">
               свежий хлебчик
             </h3>
 
@@ -783,19 +783,19 @@
         <h2 class="promotions__title title">Акции</h2>
 
         <ul class="promotions__filter cards-filter">
-          <li class="promotions__filter cards-filter__item">
+          <li class="cards-filter__item">
             <button class="cards-filter__btn" data-filter="all" type="button">
               Все товары
             </button>
           </li>
 
-          <li class="promotions__filter cards-filter__item">
+          <li class="cards-filter__item">
             <button class="cards-filter__btn" data-filter=".category-new" type="button">
               Новинки
             </button>
           </li>
 
-          <li class="promotions__filter cards-filter__item">
+          <li class="cards-filter__item">
             <button class="cards-filter__btn" data-filter=".category-hit" type="button">
               Хиты
             </button>
@@ -812,42 +812,42 @@
                 <li class="badges__item badges__item--sale ">-50%</li>
               </ul>
 
-              <img class="promotions__card product-card__img" width="100" height="100"
-                src="images/products/ananas-100.jpg" alt="кофе с коноплей">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/ananas-100.jpg"
+                  alt="кофе с коноплей">
+              </a>
 
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Ананас, 1кг</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Ананас, 1кг</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available
-                    product-card__availability-item--on">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is presence__item--on">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not ">
                     нет в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--ends ">
+                  <li class="presence__item presence__item--ends ">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      999<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      999<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      1999<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      1999<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">4.5</span>
+                  <span class="product-card__rating">4.5</span>
                 </div>
               </div>
             </article>
@@ -862,46 +862,44 @@
                 <li class="badges__item badges__item--sale ">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/coffee.jpg"
+                  alt="кофе с коноплей">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/coffee.jpg"
-                alt="кофе с коноплей">
 
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Кофе с коноплей органический Caffé Salomoni
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Кофе с коноплей органический Caffé Salomoni
                     250г</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--available">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not ">
                     нет в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--ends product-card__availability-item--on">
+                  <li class="presence__item presence__item--ends presence__item--on">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      777<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      777<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      877<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      877<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">4.9</span>
+                  <span class="product-card__rating">4.9</span>
                 </div>
               </div>
             </article>
@@ -916,44 +914,42 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/strawberry.jpg"
+                  alt="спелая ароматная клубника">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100"
-                src="images/products/strawberry.jpg" alt="спелая ароматная клубника">
-
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Клубника, 1 кг</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Клубника, 1 кг</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--available">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is">
                     в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item
-                    product-card__availability-item--not-available product-card__availability-item--on">
+                  <li class="presence__item presence__item--not presence__item--on">
                     нет в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--ends ">
+                  <li class="presence__item presence__item--ends">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      440<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      440<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      500<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      500<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">5.0</span>
+                  <span class="product-card__rating">5.0</span>
                 </div>
               </div>
             </article>
@@ -968,44 +964,42 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/mango.jpg"
+                  alt="экзотический манго">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/mango.jpg"
-                alt="экзотический манго">
-
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Манго, 1кг</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Манго, 1кг</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available
-                    product-card__availability-item--on">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is presence__item--on">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not ">
                     нет в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--ends ">
+                  <li class="presence__item presence__item--ends ">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      660<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      660<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      960<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      960<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">5.0</span>
+                  <span class="product-card__rating">5.0</span>
                 </div>
               </div>
             </article>
@@ -1020,44 +1014,42 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/salmon.jpg"
+                  alt="Свежий лосось">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/salmon.jpg"
-                alt="Свежий лосось">
-
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Лосось, 1кг</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Лосось, 1кг</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available
-                    product-card__availability-item--on">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is presence__item--on">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not ">
                     нет в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--ends ">
+                  <li class="presence__item presence__item--ends ">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      999<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      999<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      1199<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      1199<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">4.5</span>
+                  <span class="product-card__rating">4.5</span>
                 </div>
               </div>
             </article>
@@ -1072,45 +1064,42 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/vegetables-juice.jpg"
+                  alt="овощной сок">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100"
-                src="images/products/vegetables-juice.jpg" alt="овощной сок">
-
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Сок Granini овощной 100%, 0.5л</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Сок Granini овощной 100%, 0.5л</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--available">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not">
                     нет в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--ends  product-card__availability-item--on">
+                  <li class="presence__item presence__item--ends presence__item--on">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      180<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      180<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      230<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      230<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">4.9</span>
+                  <span class="product-card__rating">4.9</span>
                 </div>
               </div>
             </article>
@@ -1126,44 +1115,42 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/fruit-basket.jpg"
+                  alt="Фруктовая корзина">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100"
-                src="images/products/fruit-basket.jpg" alt="Фруктовая корзина">
-
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Фруктовая корзина, 1 штг</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Фруктовая корзина, 1 штг</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available
-                    product-card__availability-item--on">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is presence__item--on">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not">
                     нет в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--ends ">
+                  <li class="presence__item presence__item--ends">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      3990<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      3990<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      5990<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      5990<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">4.8</span>
+                  <span class="product-card__rating">4.8</span>
                 </div>
               </div>
             </article>
@@ -1178,53 +1165,53 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" width="100" height="100" src="images/products/pork.jpg"
+                  alt="Свинина мякоть">
+              </a>
 
-              <img class="promotions__card product-card__img" width="100" height="100" src="images/products/pork.jpg"
-                alt="Свинина мякоть">
-
-
-              <div class="promotions__card product-card__info">
-                <h3 class="promotions__card product-card__name">
-                  <a class="promotions__card product-card__link" href="#">Свинина мякоть, 1 кг</a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">
+                  <a class="product-card__link" href="#">Свинина мякоть, 1 кг</a>
                 </h3>
 
-                <ul class="promotions__card product-card__availability-list">
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--available
-                    product-card__availability-item--on">
+                <ul class="product-card__presence presence">
+                  <li class="presence__item presence__item--is
+                  presence__item--on">
                     в наличии
                   </li>
 
-                  <li
-                    class="promotions__card product-card__availability-item product-card__availability-item--not-available ">
+                  <li class="presence__item presence__item--not ">
                     нет в наличии
                   </li>
 
-                  <li class="promotions__card product-card__availability-item product-card__availability-item--ends ">
+                  <li class="presence__item presence__item--ends ">
                     заканчивается
                   </li>
                 </ul>
 
-                <div class="promotions__card product-card__footer">
-                  <ul class="promotions__card product-card__prices prices">
-                    <li class="promotions__card prices__item prices__item--new">
-                      499<span class="promotions__card prices__currency">₽</span>
+                <div class="product-card__footer">
+                  <ul class="product-card__prices prices">
+                    <li class="prices__item prices__item--new">
+                      499<span class="prices__currency">₽</span>
                     </li>
 
-                    <li class="promotions__card prices__item prices__item--old">
-                      599<span class="promotions__card prices__currency">₽</span>
+                    <li class="prices__item prices__item--old">
+                      599<span class="prices__currency">₽</span>
                     </li>
                   </ul>
 
-                  <span class="promotions__card product-card__rating">4.6</span>
+                  <span class="product-card__rating">4.6</span>
                 </div>
               </div>
             </article>
           </li>
         </ul>
+
+        <button class="promotions__btn btn" type="button">
+          Показать еще
+        </button>
       </div>
-      <button class="promotions__btn btn" type="button">
-        Показать еще
-      </button>
     </section>
 
     <section class="brends-slider">
@@ -1270,53 +1257,66 @@
         <div class="news__top">
           <h2 class="news__title title">наши новости</h2>
 
-          <div class="news__link-item">
-            <a class="news__link" href="#">все новости</a>
-          </div>
+          <!-- <div class="news__item"> -->
+          <a class="news__top-link" href="#">все новости</a>
+
         </div>
 
         <ul class="news__cards">
           <li class="news__card">
-            <div class="news__card-date">июль<span>15</span></div>
+            <a class="news__link" href="#">
+              <div class="news__date">
+                <span class="news__month">июль</span>
+                <span class="news__day">15</span>
+              </div>
 
-            <img class="news__card-img" src="images/news/image1.jpg" alt="свежая клубника">
+              <img class="news__img" src="images/news/image1.jpg" width="410" height="240" alt="свежая клубника">
 
-            <h3 class="news__card-name">
-              <a class="news__card-link" href="#">
-                Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
-                разобрали!
-              </a>
-            </h3>
+              <div class="news__wrap">
+                <h3 class="news__name">
+                  Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
+                  разобрали!
+                </h3>
+              </div>
+            </a>
           </li>
 
           <li class="news__card">
-            <div class="news__card-date">май<span>07</span></div>
+            <a class="news__link" href="#">
+              <div class="news__date">
+                <span class="news__month">май</span>
+                <span class="news__day">07</span>
+              </div>
 
-            <img class="news__card-img" src="images/news/image2.jpg" width="410" height="240" alt="сочный манго">
+              <img class="news__img" src="images/news/image2.jpg" width="410" height="240" alt="сочный манго">
 
-            <h3 class="news__card-name">
-              <a class="news__card-link" href="#">
-                Шикарнейший выбор манго в нашем онлайн-маркете
-              </a>
-            </h3>
+              <div class="news__wrap">
+                <h3 class="news__name">
+                  Шикарнейший выбор манго в нашем онлайн-маркете
+                </h3>
+              </div>
+            </a>
           </li>
 
           <li class="news__card">
-            <div class="news__card-date">февраль<span>20</span></div>
+            <a class="news__link" href="#">
+              <div class="news__date">
+                <span class="news__month">февраль</span>
+                <span class="news__day">20</span>
+              </div>
 
-            <img class="news__card-img" src="images/news/image3.jpg" alt="экзотический папая">
+              <img class="news__img" src="images/news/image3.jpg" width="410" height="240" alt="экзотический папая">
 
-            <h3 class="news__card-name">
-              <a class="news__card-link" href="#">
-                Всё, что вы хотели знать о папайя
-              </a>
-            </h3>
+              <div class="news__wrap">
+                <h3 class="news__name">
+                  Всё, что вы хотели знать о папайя
+                </h3>
+              </div>
+            </a>
           </li>
-
         </ul>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">

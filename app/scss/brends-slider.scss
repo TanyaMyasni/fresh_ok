@@ -1,6 +1,9 @@
 .brends-slider {
-  margin: 70px 0;
-  
+  padding: 72px 0 68px;
+
+  &__container {
+    padding: 0;
+  }
 
   &__list {
     opacity: 0.5;
@@ -13,6 +16,11 @@
 
   &__img {
     margin: 0 auto;
+    object-fit: contain;
+  }
+
+  @include media-1 {
+    
   }
 
 }

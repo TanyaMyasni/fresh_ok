@@ -38,6 +38,36 @@ $white:      #FFFFFF;
   @return m#{i}n(#{$numbers});
 }
 
+$md1: 1200;
+$md2: 992;
+$md3: 786;
+$md4: 576;
+
+
+@mixin media-1 {
+  @media (max-width: #{$md1}px) {
+    @content;
+  }
+}
+
+@mixin media-2 {
+  @media (max-width: #{$md2}px) {
+    @content;
+  }
+}
+
+@mixin media-3 {
+  @media (max-width: #{$md3}px) {
+    @content;
+  }
+}
+
+@mixin media-4 {
+  @media (max-width: #{$md4}px) {
+    @content;
+  }
+}
+
 
 
 
