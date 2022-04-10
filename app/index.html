@@ -16,7 +16,120 @@
     <nav class="header__nav">
       <div class="header__top header-top">
         <div class="header-top__container container">
-          <ul class="header-top__list">
+
+          <button class="header-top__burger-btn active" type="button">
+            <span class="sr-only">нажать для открытия меню навигации</span>
+          </button>
+
+          <div class="header-top__overlay overlay">
+            <div class="header-top__burger-menu burger-menu">
+              <div class="burger-menu__top">
+                <a class="burger-menu__logo logo" href="#">
+                  <img class="logo__img" width="200" src="images/burgermenu-logo.svg" alt="лого магазина фрешок">
+                </a>
+
+                <button class="burger-menu__close-btn close-btn"></button>
+              </div>
+
+              <div class="burger-menu__breadcrumbs breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link breadcrumbs__link--enter" href="#">Вход</a>
+                  </li>
+
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link breadcrumbs__link--login" href="#">Регистрация</a>
+                  </li>
+                </ul>
+              </div>
+
+              <a class="burger-menu__catalog-link" href="#">Каталог товаров</a>
+
+              <ul class="burger-menu__contact-list">
+                <li class="burger-menu__contact-item">
+                  <a class="burger-menu__contact-link burger-menu__contact-link--phone" href="tel:+7907288365">
+                    +7 907 288 365
+                  </a>
+                </li>
+
+                <li class="burger-menu__contact-item">
+                  <a class="burger-menu__contact-link burger-menu__contact-link--location" href="#">
+                    Санкт-Петербург, ул. Ленина, 1
+                  </a>
+                </li>
+
+                <li class="burger-menu__contact-item">
+                  <ul class="burger-menu__social social">
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/facebook.svg');"
+                        href="#" target="blank">
+                        <span class="sr-only">перейти на нашу страницу фейсбук</span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/youtube.svg');" href="#"
+                        target="blank">
+                        <span class="sr-only">перейти на наш канал в ютуб</span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/telegram.svg');"
+                        href="#" target="blank">
+                        <span class="sr-only">перейти в нашу группу в телеграм</span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/instagram.svg');"
+                        href="#" target="blank">
+                        <span class="sr-only"> перейти на нашу страницу в инстаграм</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <nav class="burger-menu__nav">
+                <ul class="burger-menu__nav-list">
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Доставка</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">О Нас</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Новости</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Контакты</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Акции</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Вакансии</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Отзывы</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Публичная оферта</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <ul class="header-top__list-left">
             <li class="header-top__item-left">
               <a class="header-top__link header-top__link--delivery" href="#">
                 АДРЕС И ВРЕМЯ ДОСТАВКИ
@@ -58,6 +171,10 @@
 
           <a class="header__logo logo" href="#">
             <img class="logo__img" width="200" src="images/logo.svg" alt="лого магазина фрешок">
+          </a>
+
+          <a class="header__logo-short" href="#" >
+            <img class="logo__img" src="images/logo-short.svg" width="37" heght="40" alt="лого магазина фрешок">
           </a>
 
           <div class="header__catalog catalog">
@@ -137,14 +254,20 @@
           <form class="header__form form">
             <label class="sr-only" for="form-search">ввести наименование товара</label>
 
-            <input class="header__form-input " type="search" id="form-search" name="form-search"
+            <input class="form__input " type="search" id="form-search" name="form-search"
               placeholder="Найти в магазине ..." required>
 
-            <button class="header__form-btn" type="submit">поиск</button>
+            <button class="form__btn" type="submit">поиск</button>
           </form>
 
 
           <ul class="header__user-nav user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--search" type="button">
+                <span class="sr-only">найти в магазине</span>
+              </button>
+            </li>
+
             <li class="user-nav__item">
               <a class="user-nav__link user-nav__link--user" href="#">
                 <span class="sr-only">страница покупателя</span>
@@ -168,6 +291,15 @@
         </div>
       </div>
     </nav>
+
+    <!-- <form class="header__bottom-form form">
+      <label class="sr-only" for="form-search">ввести наименование товара</label>
+
+      <input class="form__input " type="search" id="form-search" name="form-search"
+        placeholder="Я ищу ..." required>
+
+      <button class="form__btn" type="submit">поиск</button>
+    </form> -->
 
     <div class="header__overlay overlay">
       <div class="overlay__basket basket">
@@ -1257,9 +1389,10 @@
         <div class="news__top">
           <h2 class="news__title title">наши новости</h2>
 
-          <!-- <div class="news__item"> -->
-          <a class="news__top-link" href="#">все новости</a>
+          <div class="news__item">
+            <a class="news__top-link" href="#">все новости</a>
 
+          </div>
         </div>
 
         <ul class="news__cards">
@@ -1315,7 +1448,7 @@
             </a>
           </li>
         </ul>
-      </div>
+
     </section>
   </main>
 

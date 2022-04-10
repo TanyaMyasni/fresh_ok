@@ -31,13 +31,6 @@ $white:      #FFFFFF;
   }
 }
 
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-}
-
 $md1: 1200;
 $md2: 992;
 $md3: 786;
@@ -67,6 +60,16 @@ $md4: 576;
     @content;
   }
 }
+
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
 
 
 
