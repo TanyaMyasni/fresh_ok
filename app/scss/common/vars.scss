@@ -35,6 +35,7 @@ $md1: 1200;
 $md2: 992;
 $md3: 786;
 $md4: 576;
+$md5: 414;
 
 
 @mixin media-1 {
@@ -61,14 +62,20 @@ $md4: 576;
   }
 }
 
+@mixin media-5 {
+  @media (max-height: #{$md5}px) {
+    @content;
+  }
+}
 
 
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-}
+
+// @function max($numbers...) {
+//   @return m#{a}x(#{$numbers});
+// }
+// @function min($numbers...) {
+//   @return m#{i}n(#{$numbers});
+// }
 
 
 

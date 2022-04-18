@@ -1,11 +1,27 @@
 .news {
   padding-bottom: 72px;
 
+  @include media-2 {
+    padding-bottom: 33px;
+  }
+
+  .title {
+    @include media-4 {
+      margin-bottom: 6px;
+      text-align: left;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    @include media-4 {
+      display: block;
+      margin-bottom: 26px;
+    }
   }
 
   &__top-link {
@@ -19,6 +35,10 @@
     color: $green-800;
     outline: transparent;
     transition: color 0.3s, border-color 0.3s;
+
+    @include media-4 {
+      line-height: 1;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
@@ -43,13 +63,26 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @include media-1 {
+      gap: 15px;
+    }
+
+    @include media-3 {
+      display: block; 
+    }
   }
 
   &__card {
     position: relative;
+    max-width: 410px;
     overflow: hidden;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
+
+    @include media-3 {
+      margin: 0 auto 14px;
+    }
   }
 
   &__date {
@@ -65,6 +98,7 @@
     text-align: center;
     letter-spacing: 0.1em;
     border-radius: 0 0 4px 4px;
+    z-index: 1;
   }
 
   &__day {
@@ -78,12 +112,28 @@
     text-transform: uppercase;
   }
 
+  &__img-wrap {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 58.54%;
+  }
+
   &__img {
-    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__wrap {
     padding: 18px;
+    @include media-4 {
+      padding: 15px;
+    }
   }
   
   &__name {
@@ -94,10 +144,15 @@
     transition: color 0.3s;
     @include line-clamp(5);
 
+    @include media-4 {
+      @include line-clamp(3);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
     &:hover {
       color: $green-800;
     }
-    
   }
 
   &__link {

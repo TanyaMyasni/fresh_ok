@@ -2,36 +2,80 @@
   padding: 70px 0;
   background-color: $silver-50;
 
-  &__title {
-    margin-bottom: 30px;
+  @include media-2 {
+    padding: 48px 0;
   }
 
-  &__filter {
-    margin-bottom: 50px;
-
-    .cards-filter {
-      &__item {
-
-        &:not(:last-child) {
-          margin-right: 30px;
-        }
-      }
+  &__container {
+    @include media-3 {
+      padding: 0 34px;
     }
   }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include media-3 {
+      margin-bottom: 18px;
+    }
+  }
+
+  .cards-filter {
+    @include media-3 {
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      margin-right: 15px;
+    }
+  }
+
 
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 50px;
+
+    @include media-1 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-2 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @include media-3 {
+      margin-bottom: 23px;
+      display: block;
+    }
   }
 
   .product-card {
     flex-direction: row;
+    max-width: 450px;
+    min-height: 124px;
     padding: 10px 12px;
     background-color: $white;
 
+    @include media-3 {
+      padding: 10px 15px;
+    }
+
+    @include media-3 {
+      margin: 0 auto 15px;
+    }
+
+    &__link-img {
+      margin-right: 12px;
+      width: 100px;
+      padding-bottom: 0;
+    }
+
     &__img {
+      width: 100px;
+      height: 100px;
       margin-right: 10px;
     }
 
@@ -49,7 +93,7 @@
     }
 
     .presence {
-      &__item{
+      &__item {
         margin-bottom: 2px;
       }
     }

@@ -21,6 +21,11 @@
   color: $black;
   background-color: $white;
 
+  @include media-3 {
+    top: 110px;
+    height: calc(100% - 110px);
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -56,15 +61,35 @@
   }
 
   &__cards {
+    width: 100%;
     flex-grow: 1;
     padding: 12px;
+    overflow-y: auto;
     background-color: $silver-100;
+  }
+
+  &__card {
+    margin: 0 auto;
   }
 
   &__currency {
     font-weight: 600;
     font-size: 14px;
     line-height: 1;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+    @include media-3 {
+      padding: 18px 15px;
+    }
+  }
+
+  &__total-sum {
+    align-self: center;
   }
 
   &__order-btn {
@@ -75,16 +100,10 @@
     line-height: 1.3;
     color: $white;
     background-color: $green-800;
-  }
 
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 24px;
-  }
-
-  &__total-sum {
-    align-self: center;
+    @include media-3 {
+      padding: 12px;
+    }
   }
 }
 
@@ -98,17 +117,36 @@
   border: 1px solid $silver-600;
   border-radius: 3px;
 
+  @include media-4 {
+    flex-direction: column;
+    max-width: 370px;
+  }
+
   &__img {
     object-fit: contain;
     margin-right: 32px;
   }
 
+  &__describe,
+  &__calculator {
+    display: flex;
+    
+  }
+
   &__info {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 170px;
+    // max-width: 170px;
     width: 100%;
+    
+    @include media-4 {
+      // max-width: 252px;
+      // width: 100%;
+      padding-right: 15px;
+      flex-grow: 1;
+    }
   }
 
   &__name {
@@ -123,10 +161,18 @@
     @include line-clamp(2);
   }
 
+  &__calculator {
+    justify-content: space-between;
+  }
+
   &__counter {
     margin: 0 12px;
     display: flex;
     align-self: end;
+
+    @include media-4 {
+      margin: 18px 0 0;
+    }
   }
 
   &__plus-btn,
@@ -183,7 +229,6 @@
   }
 
   &__delete-btn {
-
     &.close-btn {
       position: absolute;
       top: 6px;

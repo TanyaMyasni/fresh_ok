@@ -1,12 +1,15 @@
 .cards-filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 48px;
+
+  @include media-2 {
+    margin-bottom: 24px;
+  }
 
   &__item {
-    
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
+    margin: 0 12px;
   }
 
   &__btn {
@@ -17,6 +20,11 @@
     outline: transparent;
     transition: color 0.3s;
     letter-spacing: 0.03em;
+
+    @include media-3 {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;

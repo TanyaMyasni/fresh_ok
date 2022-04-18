@@ -9,7 +9,7 @@ $(function () {
     prevArrow: $('.offers__slider-btn--prev'),
     nextArrow: $('.offers__slider-btn--next'),
     fade: true,
-    // autoplay: true
+    dots: true,
   });
 
   $('.brends-slider__list').slick({
@@ -17,6 +17,26 @@ $(function () {
     infinite: true,
     slidesToShow: 6,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 786,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   });
 
   $('.user-nav__link--cart').on('click', function () {
@@ -34,11 +54,13 @@ $(function () {
   $('.header-top__burger-btn').on('click', function () {
     $('.header-top__overlay').toggleClass('is-open');
     $('.burger-menu__close-btn').addClass('is-open');
+    $('body').toggleClass('lock');
   })
 
   $('.burger-menu__close-btn').on('click', function () {
     $('.header-top__overlay').removeClass('is-open');
     $('.burger-menu__close-btn').removeClass('is-open');
+    $('body').removeClass('lock');
   })
 
   $('.user-nav__link--search').on('click', function () {

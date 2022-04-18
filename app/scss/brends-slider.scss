@@ -1,5 +1,8 @@
 .brends-slider {
   padding: 72px 0 68px;
+  @include media-2 {
+    padding: 45px 0;
+  }
 
   &__container {
     padding: 0;

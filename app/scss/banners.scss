@@ -1,10 +1,28 @@
 .banners {
   padding-bottom: 75px;
-  
+
+  @include media-2 {
+    padding-bottom: 50px;
+  }
+
   &__list {
     display: grid;
-    grid-template-columns: 630px 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 30px;
+
+    @include media-1 {
+      gap: 10px;
+    }
+
+    @include media-2 {
+      gap: 20px;
+      grid-template: 1fr 1fr/ 1fr 1fr;
+    }
+
+    @include media-4 {
+      gap: 15px;
+      grid-template: 1fr 1fr 1fr/ 1fr;
+    }
   }
 
   &__item {
@@ -13,9 +31,40 @@
     letter-spacing: normal;
     text-transform: uppercase;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
-    border-radius: 4px;
+    border-radius: 6px;
+
+    @include media-1 {
+      padding: 78px 15px 74px;
+    }
+
+    @include media-2 {
+      grid-template: 1fr 1fr/ 2fr 1fr;
+    }
+
+    @include media-3 {
+      padding: 76px 18px 30px;
+      background-position: 18% center;
+    }
+
+    &:nth-child(1) {
+      .banners {
+        &__title {
+          @include media-4 { 
+            max-width: 75%;
+          }
+        }
+      }
+      
+      @include media-2 {
+        grid-column: 1/3;
+      }
+
+      @include media-4 {
+        grid-column: 1/2;
+      }
+    }
 
     &--white {
       color: $white;
@@ -36,11 +85,11 @@
     font-size: 12px;
     line-height: 1;
     letter-spacing: 0.1em;
-    
+
   }
 
   &__title {
-    max-width: 75%;
+    max-width: 85%;
     margin-bottom: 5px;
     font-family: 'Ruda';
     font-weight: 600;
@@ -48,6 +97,21 @@
     text-transform: uppercase;
     text-align: left;
     @include line-clamp(2);
+
+    @include media-1 {
+      max-width: 65%;
+      font-size: 26px;
+    }
+
+    @include media-3 {
+      margin-bottom: 68px;
+      font-size: 24px;
+    }
+
+    @include media-4 {
+      max-width: 50%;
+    }
+
   }
 
   &__link {
@@ -59,7 +123,6 @@
     letter-spacing: normal;
     border-bottom: 2px solid $dark-500;
     transition: border-color 0.3s;
-
 
     &:hover {
       border-color: transparent;
