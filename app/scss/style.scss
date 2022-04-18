@@ -4,6 +4,11 @@
 @import 'common/reset';
 @import 'common/global';
 
+
+
+@import 'components/burger-menu.scss';
+@import 'components/product-form.scss';
+@import 'components/basket.scss';
 @import 'components/cards-filter.scss';
 @import 'components/product-card.scss';
 @import 'components/social.scss';
@@ -15,7 +20,7 @@
 @import 'top-products';
 @import 'banners';
 @import 'promotions';
-@import 'brends';
+@import 'brends-slider';
 @import 'news';
 
 @import 'footer';

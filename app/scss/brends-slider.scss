@@ -1,0 +1,29 @@
+.brends-slider {
+  padding: 72px 0 68px;
+  @include media-2 {
+    padding: 45px 0;
+  }
+
+  &__container {
+    padding: 0;
+  }
+
+  &__list {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  @include media-1 {
+    
+  }
+
+}

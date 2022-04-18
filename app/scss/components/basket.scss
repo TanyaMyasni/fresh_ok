@@ -1,0 +1,247 @@
+.number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  color: $dark-500;
+}
+
+.basket {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  max-width: 475px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $black;
+  background-color: $white;
+
+  @include media-3 {
+    top: 110px;
+    height: calc(100% - 110px);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 15px 8px 20px;
+  }
+
+  &__title {
+    margin-left: 4px;
+  }
+
+  &__clean-btn {
+    padding: 4px;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    outline: transparent;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+
+    }
+
+    &:hover {
+      box-shadow: none;
+      background-color: $green-100;
+    }
+
+    &:active {
+      background-color: rgba($silver-600, 0.3);
+      box-shadow: none;
+    }
+  }
+
+  &__cards {
+    width: 100%;
+    flex-grow: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background-color: $silver-100;
+  }
+
+  &__card {
+    margin: 0 auto;
+  }
+
+  &__currency {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+    @include media-3 {
+      padding: 18px 15px;
+    }
+  }
+
+  &__total-sum {
+    align-self: center;
+  }
+
+  &__order-btn {
+    display: block;
+    padding: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    color: $white;
+    background-color: $green-800;
+
+    @include media-3 {
+      padding: 12px;
+    }
+  }
+}
+
+.basket-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: $white;
+  border: 1px solid $silver-600;
+  border-radius: 3px;
+
+  @include media-4 {
+    flex-direction: column;
+    max-width: 370px;
+  }
+
+  &__img {
+    object-fit: contain;
+    margin-right: 32px;
+  }
+
+  &__describe,
+  &__calculator {
+    display: flex;
+    
+  }
+
+  &__info {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // max-width: 170px;
+    width: 100%;
+    
+    @include media-4 {
+      // max-width: 252px;
+      // width: 100%;
+      padding-right: 15px;
+      flex-grow: 1;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $dark-900;
+  }
+
+  &__link {
+    @include line-clamp(2);
+  }
+
+  &__calculator {
+    justify-content: space-between;
+  }
+
+  &__counter {
+    margin: 0 12px;
+    display: flex;
+    align-self: end;
+
+    @include media-4 {
+      margin: 18px 0 0;
+    }
+  }
+
+  &__plus-btn,
+  &__minus-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 0;
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $white;
+    }
+
+    &:active {
+      &::before {
+        background-color: rgba($white, 0.5);
+      }
+    }
+  }
+
+  &__minus-btn {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-minus');
+    }
+  }
+
+  &__plus-btn {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-plus');
+    }
+  }
+
+  &__quantity {
+    width: 36px;
+    height: 24px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    outline: transparent;
+  }
+
+  &__total-price {
+    align-self: end;
+  }
+
+  &__delete-btn {
+    &.close-btn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 24px;
+      height: 24px;
+
+      &::before {
+        width: 12px;
+        height: 12px;
+        mask-image: url('../images/sprite.svg#icon-close1');
+        background-color: $silver-600;
+      }
+    }
+  }
+}

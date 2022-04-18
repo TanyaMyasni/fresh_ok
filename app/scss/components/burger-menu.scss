@@ -1,0 +1,162 @@
+.burger-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  font-weight: 400;
+  font-size: 18px;
+  color: $dark-800;
+  text-transform: none;
+  background-color: $white;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 15px;
+    @include media-3 {
+      padding: 5px 15px;
+    }
+  }
+
+  &__logo {
+    flex: none;
+  }
+
+  &__close-btn {
+    align-self: center;
+  }
+
+  &__breadcrumbs {
+    line-height: 1;
+    color: $white;
+    background-color: $green-800;
+  }
+
+  &__catalog-link {
+    position: relative;
+    display: block;
+    padding: 15px 55px;
+    font-weight: 600;
+    line-height: 1;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 20px;
+      top: 14px;
+      left: 16px;
+      mask-image: url('../images/sprite.svg#icon-nav');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      background-color: $dark-800;
+    }
+  }
+
+  &__contact-list {
+    padding: 24px 15px;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__contact-link {
+    display: inline-block;
+    padding-left: 40px;
+    margin-bottom: 18px;
+
+    &--phone,
+    &--location {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        left: 0;
+        width: 24px;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: $dark-800;
+      }
+    }
+
+    &--phone {
+      &::before {
+        top: 0;
+        height: 24px;
+        mask-image: url('../images/sprite.svg#icon-tel');
+      }
+    }
+
+    &--location {
+      &::before {
+        top: 6px;
+        height: 33px;
+        mask-image: url('../images/sprite.svg#icon-location');
+      }
+    }
+  }
+
+  .social {
+    &__link {
+      filter: invert(85%) sepia(7%) saturate(1273%) hue-rotate(42deg) brightness(93%) contrast(83%);
+    }
+  }
+
+  &__nav {
+    padding: 24px 15px;
+  }
+
+  &__nav-item {
+    margin-bottom: 15px;
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: inline-block;
+
+    &--enter {
+      position: relative;
+      padding: 15px 20px 15px 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 25px;
+        height: 32px;
+        background-image: url("../images/icons/icon-user.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    &--login {
+      position: relative;
+      padding: 15px 30px 15px 20px;
+
+      &::before {
+        content: "|";
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+    }
+  }
+}

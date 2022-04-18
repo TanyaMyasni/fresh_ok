@@ -31,12 +31,52 @@ $white:      #FFFFFF;
   }
 }
 
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
+$md1: 1200;
+$md2: 992;
+$md3: 786;
+$md4: 576;
+$md5: 414;
+
+
+@mixin media-1 {
+  @media (max-width: #{$md1}px) {
+    @content;
+  }
 }
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
+
+@mixin media-2 {
+  @media (max-width: #{$md2}px) {
+    @content;
+  }
 }
+
+@mixin media-3 {
+  @media (max-width: #{$md3}px) {
+    @content;
+  }
+}
+
+@mixin media-4 {
+  @media (max-width: #{$md4}px) {
+    @content;
+  }
+}
+
+@mixin media-5 {
+  @media (max-height: #{$md5}px) {
+    @content;
+  }
+}
+
+
+
+// @function max($numbers...) {
+//   @return m#{a}x(#{$numbers});
+// }
+// @function min($numbers...) {
+//   @return m#{i}n(#{$numbers});
+// }
+
 
 
 
