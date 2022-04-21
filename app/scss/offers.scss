@@ -87,10 +87,13 @@
     display: flex;
     align-items: center;
     height: 600px;
-    padding: 130px;
+    
+    @include media-1 {
+      padding: 130px;
+    }
 
     @include media-3 {
-      height: 320px;
+      height: 321px;
       padding: 0;
     }
 
@@ -138,6 +141,7 @@
     @include media-3 {
       margin-bottom: 15px;
       font-size: 20px;
+      letter-spacing: -0.03em;
     }
 
     @include media-5 {
@@ -152,7 +156,7 @@
   }
 
   &__text {
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: normal;
@@ -164,9 +168,9 @@
   }
 
   &__btn {
-    font-size: 14px;
-    padding: 12px 24px;
-    letter-spacing: 0.03em;
+    @include media-3 {
+      font-size: 14px; 
+    }
   }
 
   .slick-dots {

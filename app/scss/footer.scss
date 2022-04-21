@@ -51,7 +51,7 @@
 
   &__logo {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
 
     @include media-3 {
       margin: 0 auto;
@@ -64,7 +64,7 @@
 
     &>:not(:first-child) {
       @include media-3 {
-        padding: 24px 0;
+        padding: 22px 0;
       }
     }
 
@@ -90,14 +90,14 @@
     }
 
     @include media-3 {
-      padding: 8px 24px 24px;
+      padding: 12px 24px 24px;
       margin: 0;
       order: 0;
     }
   }
 
   &__subscribe-text {
-    padding-bottom: 11px;
+    margin-bottom: 14px;
   }
 
   &__items {
@@ -159,7 +159,7 @@
     display: block;
     max-width: 180px;
     width: 100%;
-    padding: 12px;
+    padding: 11px;
     font-family: "OpenSans", sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -225,10 +225,10 @@
 
   &__social {
     margin-left: -5px;
-  }
 
-  .social {
-    justify-content: center;
+    @include media-2 {
+      justify-content: center;
+    }
   }
 }
 
