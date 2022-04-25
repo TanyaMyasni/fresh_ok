@@ -1,0 +1,34 @@
+.breadcrumbs {
+  padding: 24px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $dark-500;
+  background-color: $silver-100;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      position: relative;
+      padding-right: 16px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 6px;
+        width: 6px;
+        height: 10px;
+        mask-image: url('../images/sprite.svg#icon-arrow-right');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: $silver-600;
+      }
+    }
+
+  }
+}

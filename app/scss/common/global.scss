@@ -58,7 +58,7 @@ body {
 }
 
 .title {
-  font-family: "Ruda",sans-serif;
+  font-family: "Ruda", sans-serif;
   font-size: 32px;
   font-weight: 600;
   text-align: center;
@@ -114,46 +114,111 @@ body {
 }
 
 .close-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  outline: transparent;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    mask-image: url('../images/sprite.svg#icon-close1');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    background-color: $black;
     transition: background-color 0.3s;
-    outline: transparent;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px $green-200;
+  }
+
+  &:hover {
+    box-shadow: none;
+    background-color: $green-100;
 
     &::before {
-      content: "";
-      width: 24px;
-      height: 24px;
-      mask-image: url('../images/sprite.svg#icon-close1');
-      mask-repeat: no-repeat;
-      mask-position: center;
-      mask-size: cover;
-      background-color: $black;
-      transition: background-color 0.3s;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px $green-200;
-    }
-
-    &:hover {
-      box-shadow: none;
-      background-color: $green-100;
-
-      &::before {
-        background-color: $green-800;
-      }
-    }
-
-    &:active {
-      background-color: rgba($silver-600, 0.3);
-      box-shadow: none;
+      background-color: $green-800;
     }
   }
 
+  &:active {
+    background-color: rgba($silver-600, 0.3);
+    box-shadow: none;
+  }
+}
+
+.arrow-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba($white, 0.8);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.3s,
+  background-color 0.3s;
+  outline: transparent;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 20px;
+    height: 32px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    background-color: $dark-500;
+    transition: background-color 0.3s
+  }
+
+  &--prev {
+    z-index: 1;
+
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-arrow-left');
+    }
+  }
+
+  &--next {
+    z-index: 1;
+
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-arrow-right');
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($green-900, 0.5);
+    border-radius: 6px;
+  }
+
+  &:hover {
+    box-shadow: none;
+    background-color: $green-200;
+
+    &::before {
+      background-color: $green-900;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+
+    &::before {
+      background-color: $green-900;
+    }
+  }
+  
+}
 
 .overlay {
   position: fixed;
@@ -170,9 +235,9 @@ body {
 }
 
 .overlay {
- &.is-open {
-   opacity: 1;
-   visibility: visible;
-   transform: translateY(0);
- }
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }

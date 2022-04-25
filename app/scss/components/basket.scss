@@ -138,12 +138,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // max-width: 170px;
     width: 100%;
     
     @include media-4 {
-      // max-width: 252px;
-      // width: 100%;
       padding-right: 15px;
       flex-grow: 1;
     }
@@ -159,73 +156,6 @@
 
   &__link {
     @include line-clamp(2);
-  }
-
-  &__calculator {
-    justify-content: space-between;
-  }
-
-  &__counter {
-    margin: 0 12px;
-    display: flex;
-    align-self: end;
-
-    @include media-4 {
-      margin: 18px 0 0;
-    }
-  }
-
-  &__plus-btn,
-  &__minus-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    padding: 0;
-    border-radius: 0;
-
-    &::before {
-      content: "";
-      width: 16px;
-      height: 16px;
-      mask-repeat: no-repeat;
-      mask-position: center;
-      mask-size: cover;
-      background-color: $white;
-    }
-
-    &:active {
-      &::before {
-        background-color: rgba($white, 0.5);
-      }
-    }
-  }
-
-  &__minus-btn {
-    &::before {
-      mask-image: url('../images/sprite.svg#icon-minus');
-    }
-  }
-
-  &__plus-btn {
-    &::before {
-      mask-image: url('../images/sprite.svg#icon-plus');
-    }
-  }
-
-  &__quantity {
-    width: 36px;
-    height: 24px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1;
-    outline: transparent;
-  }
-
-  &__total-price {
-    align-self: end;
   }
 
   &__delete-btn {

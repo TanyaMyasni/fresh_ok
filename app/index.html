@@ -30,14 +30,14 @@
                 <button class="burger-menu__close-btn close-btn"></button>
               </div>
 
-              <div class="burger-menu__breadcrumbs breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link breadcrumbs__link--enter" href="#">Вход</a>
+              <div class="burger-menu__login login">
+                <ul class="login__list">
+                  <li class="login__item">
+                    <a class="login__link login__link--enter" href="#">Вход</a>
                   </li>
 
-                  <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link breadcrumbs__link--login" href="#">Регистрация</a>
+                  <li class="login__item">
+                    <a class="login__link login__link--login" href="#">Регистрация</a>
                   </li>
                 </ul>
               </div>
@@ -249,13 +249,13 @@
             </ul>
           </div>
 
-          <form class="header__form form">
-            <label class="sr-only" for="form-search">ввести наименование товара</label>
+          <form class="header__product-search product-search">
+            <label class="sr-only" for="product-search">ввести наименование товара</label>
 
-            <input class="form__input " type="search" id="form-search" name="form-search"
+            <input class="product-search__input " type="search" id="product-search" name="product-search"
               placeholder="Найти в магазине ..." required>
 
-            <button class="form__btn" type="submit">поиск</button>
+            <button class="product-search__btn" type="submit">поиск</button>
           </form>
 
 
@@ -285,92 +285,102 @@
                 <span class="user-nav__number">12</span>
               </button>
             </li>
+
+            <div class="header__overlay overlay">
+              <div class="header__basket basket">
+                <div class="basket__top">
+                  <div class="basket__title-wrap">
+                    <h2 class="basket__title">Корзина</h2>
+
+                    <button class="basket__clean-btn" type="button">очистить корзину</button>
+                  </div>
+
+                  <button class="basket__close-btn close-btn"><span class="sr-only"> закрыть корзину</span></button>
+                </div>
+
+                <ul class="basket__cards">
+                  <li class="basket__card basket-card">
+                    <div class="basket-card__describe">
+                      <img class="basket-card__img" src="images/products/ananas-100.jpg" width="60" height="60"
+                        alt="ананас">
+
+                      <div class="basket-card__info">
+                        <h3 class="basket-card__name">
+                          <a class="basket-card__link" href="#">Ананас, 1кг</a>
+                        </h3>
+                        <div class="basket-card__price number">999<span class="basket__currency">₽</span> </div>
+                      </div>
+                    </div>
+
+                    <div class="basket-card__calculator calculator">
+                      <div class="calculator__counter">
+                        <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                            корзины</span></button>
+
+                        <label for="basket-quantity"></label>
+                        <input class="calculator__quantity" type="text" id="basket-quantity" value="98">
+
+                        <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                            товар в
+                            корзину</span></button>
+                      </div>
+
+                      <div class="calculator__total-price number">1998<span class="basket__currency">₽</span>
+                      </div>
+                    </div>
+
+
+                    <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                        из корзины</span></button>
+                  </li>
+
+                  <li class="basket__card basket-card">
+                    <div class="basket-card__describe">
+                      <img class="basket-card__img" src="images/products/pitahaja.jpg" width="60" height="60"
+                        alt="ананас">
+
+                      <div class="basket-card__info">
+                        <h3 class="basket-card__name">
+                          <a class="basket-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+                        </h3>
+                        <div class="basket-card__price number">1019<span class="basket__currency">₽</span> </div>
+                      </div>
+                    </div>
+
+                    <div class="basket-card__calculator calculator">
+                      <div class="calculator__counter">
+                        <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                            корзины</span></button>
+
+                        <label for="basket-quantity"></label>
+                        <input class="calculator__quantity" type="text" id="basket-quantity" value="0">
+
+                        <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                            товар в корзину</span></button>
+                      </div>
+
+                      <div class="calculator__total-price number">2038<span class="basket__currency">₽</span>
+                      </div>
+                    </div>
+
+                    <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                        из корзины</span></button>
+                  </li>
+                </ul>
+
+                <div class="basket__bottom">
+                  <h2 class="basket__title">Товаров на сумму</h2>
+
+                  <div class="basket__total-sum number">2038<span class="basket__currency">₽</span></div>
+                </div>
+
+                <button class="basket__order-btn" type="button">Оформить заказ</button>
+              </div>
+            </div>
           </ul>
         </div>
       </div>
     </nav>
-
-    <div class="header__overlay overlay">
-      <div class="header__basket basket">
-        <div class="basket__top">
-          <div class="basket__title-wrap">
-            <h2 class="basket__title">Корзина</h2>
-
-            <button class="basket__clean-btn" type="button">очистить корзину</button>
-          </div>
-
-          <button class="basket__close-btn close-btn"></button>
-        </div>
-
-        <ul class="basket__cards">
-          <li class="basket__card basket-card">
-            <div class="basket-card__describe">
-              <img class="basket-card__img" src="images/products/ananas-100.jpg" width="60" height="60" alt="ананас">
-
-              <div class="basket-card__info">
-                <h3 class="basket-card__name">
-                  <a class="basket-card__link" href="#">Ананас, 1кг</a>
-                </h3>
-                <div class="basket-card__price number">999<span class="basket__currency">₽</span> </div>
-              </div>
-            </div>
-
-            <div class="basket-card__calculator">
-              <div class="basket-card__counter">
-                <button class="basket-card__minus-btn btn" type="button"></button>
-
-                <label for="basket-quantity"></label>
-                <input class="basket-card__quantity" type="text" id="basket-quantity" value="2">
-
-                <button class="basket-card__plus-btn btn" type="button"></button>
-              </div>
-
-              <div class="basket-card__total-price number">1998<span class="basket__currency">₽</span>
-                <div>
-                </div>
-
-                <button class="basket-card__delete-btn close-btn" type="button"></button>
-          </li>
-
-          <li class="basket__card basket-card">
-            <div class="basket-card__describe">
-              <img class="basket-card__img" src="images/products/pitahaja.jpg" width="60" height="60" alt="ананас">
-
-              <div class="basket-card__info">
-                <h3 class="basket-card__name">
-                  <a class="basket-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
-                </h3>
-                <div class="basket-card__price number">1019<span class="basket__currency">₽</span> </div>
-              </div>
-            </div>
-
-            <div class="basket-card__calculator">
-              <div class="basket-card__counter">
-                <button class="basket-card__minus-btn btn" type="button"></button>
-
-                <label for="basket-quantity"></label>
-                <input class="basket-card__quantity" type="text" id="basket-quantity" value="2">
-
-                <button class="basket-card__plus-btn btn" type="button"></button>
-              </div>
-
-              <div class="basket-card__total-price number">2038<span class="basket__currency">₽</span>
-              <div>
-            </div>
-
-            <button class="basket-card__delete-btn close-btn" type="button"></button>
-          </li>
-        </ul>
-
-        <div class="basket__bottom">
-          <h2 class="basket__title">Товаров на сумму</h2>
-
-          <div class="basket__total-sum number">2038<span class="basket__currency">₽</span></div>
-        </div>
-
-        <button class="basket__order-btn" type="button">Оформить заказ</button>
-      </div>
-    </div>
   </header>
 
   <main class="main">
@@ -378,69 +388,74 @@
 
     <section class="offers">
       <h2 class="sr-only">слайдер. Актуальные акции магазина фрешОк</h2>
-      <button class="offers__slider-btn offers__slider-btn--prev" type="button">
+      <button class="offers__slider-btn offers__slider-btn--prev arrow-btn arrow-btn--prev" type="button">
         <span class="sr-only">
           предидущий слайд
         </span>
       </button>
 
       <ul class="offers__slider">
-        <li class="offers__slide" style="background-image: url('../images/slider/slider-bg-carrot.jpg')">
-          <div class="offers__container container">
-            <div class="offers__content">
-              <h3 class="offers__title">
-                СВЕЖАЧОК ВАМ в ХАТУ
-                <span>Скидка -50%</span>
-              </h3>
+        <li class="offers__slide">
+          <div class="offers__slide-inner" style="background-image: url('../images/slider/slider-bg-carrot.jpg')">
+            <div class="offers__container container">
+              <div class="offers__content">
+                <h3 class="offers__title">
+                  СВЕЖАЧОК ВАМ в ХАТУ
+                  <span>Скидка -50%</span>
+                </h3>
 
-              <p class="offers__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
+                <p class="offers__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
 
-              <button class="offers__btn btn" type="button">
-                Купить сейчас
-              </button>
+                <button class="offers__btn btn" type="button">
+                  Купить сейчас
+                </button>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="offers__slide" style="background-image: url('../images/slider/slider-bg-tomatoes.jpg')">
-          <div class="offers__container container">
-            <div class="offers__content">
-              <h3 class="offers__title">
-                НАКРУТИ СЕБЕ ТОМАТОВ
-                <span>АКЦИЯ: 3 кг по цене 1</span>
-              </h3>
+        <li class="offers__slide">
+          <div class="offers__slide-inner" style="background-image: url('../images/slider/slider-bg-tomatoes.jpg')">
+            <div class="offers__container container">
+              <div class="offers__content">
+                <h3 class="offers__title">
+                  НАКРУТИ СЕБЕ ТОМАТОВ
+                  <span>АКЦИЯ: 3 кг по цене 1</span>
+                </h3>
 
-              <p class="offers__text">
-                Только с 12 по 15 июля скидка на домашние помидорчики
-              </p>
+                <p class="offers__text">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
 
-              <a class="offers__btn btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="offers__btn btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="offers__slide" style="background-image: url('../images/slider/slider-bg-greenery.jpg')">
-          <div class="offers__container container">
-            <div class="offers__content">
-              <h3 class="offers__title">
-                Пусть остальные
-                позеленеют от зависти
-                <span>Распродажа зелени</span>
-              </h3>
+        <li class="offers__slide">
+          <div class="offers__slide-inner" style="background-image: url('../images/slider/slider-bg-greenery.jpg')">
+            <div class="offers__container container">
+              <div class="offers__content">
+                <h3 class="offers__title">
+                  Пусть остальные позеленеют от зависти
+                  <span>Распродажа зелени</span>
+                </h3>
 
-              <a class="offers__btn btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="offers__btn btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
       </ul>
 
-      <button class="offers__slider-btn offers__slider-btn--next " type="button">
+      <button class="offers__slider-btn offers__slider-btn--next arrow-btn arrow-btn--next" type="button">
         <span class="sr-only">
           следующий слайд
         </span>

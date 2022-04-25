@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФрешОк магазин свежих продуктов | главная страница</title>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <div class="header__top header-top">
+        <div class="header-top__container container">
+
+          <button class="header-top__burger-btn active" type="button">
+            <span class="sr-only">нажать для открытия меню навигации</span>
+          </button>
+
+          <div class="header-top__overlay overlay">
+            <div class="header-top__burger-menu burger-menu">
+              <div class="burger-menu__top">
+                <a class="burger-menu__logo logo" href="#">
+                  <img class="logo__img" width="200" src="images/burgermenu-logo.svg" alt="лого магазина фрешок">
+                </a>
+
+                <button class="burger-menu__close-btn close-btn"></button>
+              </div>
+
+              <div class="burger-menu__login login">
+                <ul class="login__list">
+                  <li class="login__item">
+                    <a class="login__link login__link--enter" href="#">Вход</a>
+                  </li>
+
+                  <li class="login__item">
+                    <a class="login__link login__link--login" href="#">Регистрация</a>
+                  </li>
+                </ul>
+              </div>
+
+              <a class="burger-menu__catalog-link" href="#">Каталог товаров</a>
+
+              <ul class="burger-menu__contact-list">
+                <li class="burger-menu__contact-item">
+                  <a class="burger-menu__contact-link burger-menu__contact-link--phone" href="tel:+7907288365">
+                    +7 907 288 365
+                  </a>
+                </li>
+
+                <li class="burger-menu__contact-item">
+                  <a class="burger-menu__contact-link burger-menu__contact-link--location" href="#">
+                    Санкт-Петербург, ул. Ленина, 1
+                  </a>
+                </li>
+
+                <li class="burger-menu__contact-item">
+                  <ul class="burger-menu__social social">
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/facebook.svg');"
+                        href="#" target="blank">
+                        <span class="sr-only">перейти на нашу страницу фейсбук</span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/youtube.svg');" href="#"
+                        target="blank">
+                        <span class="sr-only">перейти на наш канал в ютуб</span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/telegram.svg');"
+                        href="#" target="blank">
+                        <span class="sr-only">перейти в нашу группу в телеграм</span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" style="background-image: url('images/social-icons/instagram.svg');"
+                        href="#" target="blank">
+                        <span class="sr-only"> перейти на нашу страницу в инстаграм</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <nav class="burger-menu__nav">
+                <ul class="burger-menu__nav-list">
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Доставка</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">О Нас</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Новости</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Контакты</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Акции</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Вакансии</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Отзывы</a>
+                  </li>
+
+                  <li class="burger-menu__nav-item">
+                    <a class="burger-menu__nav-link" href="#">Публичная оферта</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <ul class="header-top__list-left">
+            <li class="header-top__item-left">
+              <a class="header-top__link header-top__link--delivery" href="#">
+                АДРЕС И ВРЕМЯ ДОСТАВКИ
+              </a>
+            </li>
+
+            <li class="header-top__item-left">
+              <a class="header-top__link header-top__link--phone" href="tel:+380505050505">
+                ГОРЯЧАЯ ЛИНИЯ 24/7
+              </a>
+            </li>
+          </ul>
+
+          <ul class="header-top__list">
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                ДОСТАВКА
+              </a>
+            </li>
+
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                О НАС
+              </a>
+            </li>
+
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                НОВОСТИ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <div class="header__container container">
+
+          <a class="header__logo logo" href="#">
+            <img class="logo__img" width="200" src="images/logo.svg" alt="лого магазина фрешок">
+          </a>
+
+          <a class="header__logo-short" href="#">
+            <img class="logo__img" src="images/logo-short.svg" width="37" heght="40" alt="лого магазина фрешок">
+          </a>
+
+          <div class="header__catalog catalog">
+            <button class="catalog__btn">
+              Каталог продуктов
+            </button>
+
+            <ul class="catalog__menu">
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Овощи и фрукты
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Бакалея
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Молочные продукты
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Хлеб
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Колбаса
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Рыба
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Алкоголь
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Напитки
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Торты
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Мясо
+                </a>
+              </li>
+
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Чай, кофе
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="header__product-search product-search">
+            <label class="sr-only" for="product-search">ввести наименование товара</label>
+
+            <input class="product-search__input " type="search" id="product-search" name="product-search"
+              placeholder="Найти в магазине ..." required>
+
+            <button class="product-search__btn" type="submit">поиск</button>
+          </form>
+
+
+          <ul class="header__user-nav user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--search" type="button">
+                <span class="sr-only">найти в магазине</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--user" href="#">
+                <span class="sr-only">страница покупателя</span>
+              </a>
+            </li>
+
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--heart" href=" #">
+                <span class="sr-only">понравившиеся продукты</span>
+                <span class="user-nav__number">12</span>
+              </a>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--cart" type="button">
+                <span class="sr-only">корзина покупателя</span>
+                <span class="user-nav__number">12</span>
+              </button>
+            </li>
+
+            <div class="header__overlay overlay">
+              <div class="header__basket basket">
+                <div class="basket__top">
+                  <div class="basket__title-wrap">
+                    <h2 class="basket__title">Корзина</h2>
+
+                    <button class="basket__clean-btn" type="button">очистить корзину</button>
+                  </div>
+
+                  <button class="basket__close-btn close-btn"><span class="sr-only"> закрыть корзину</span></button>
+                </div>
+
+                <ul class="basket__cards">
+                  <li class="basket__card basket-card">
+                    <div class="basket-card__describe">
+                      <img class="basket-card__img" src="images/products/ananas-100.jpg" width="60" height="60"
+                        alt="ананас">
+
+                      <div class="basket-card__info">
+                        <h3 class="basket-card__name">
+                          <a class="basket-card__link" href="#">Ананас, 1кг</a>
+                        </h3>
+                        <div class="basket-card__price number">999<span class="basket__currency">₽</span> </div>
+                      </div>
+                    </div>
+
+                    <div class="basket-card__calculator calculator">
+                      <div class="calculator__counter">
+                        <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                            корзины</span></button>
+
+                        <label for="basket-quantity"></label>
+                        <input class="calculator__quantity" type="text" id="basket-quantity" value="98">
+
+                        <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                            товар в
+                            корзину</span></button>
+                      </div>
+
+                      <div class="calculator__total-price number">1998<span class="basket__currency">₽</span>
+                      </div>
+                    </div>
+
+
+                    <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                        из корзины</span></button>
+                  </li>
+
+                  <li class="basket__card basket-card">
+                    <div class="basket-card__describe">
+                      <img class="basket-card__img" src="images/products/pitahaja.jpg" width="60" height="60"
+                        alt="ананас">
+
+                      <div class="basket-card__info">
+                        <h3 class="basket-card__name">
+                          <a class="basket-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+                        </h3>
+                        <div class="basket-card__price number">1019<span class="basket__currency">₽</span> </div>
+                      </div>
+                    </div>
+
+                    <div class="basket-card__calculator calculator">
+                      <div class="calculator__counter">
+                        <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                            корзины</span></button>
+
+                        <label for="basket-quantity"></label>
+                        <input class="calculator__quantity" type="text" id="basket-quantity" value="0">
+
+                        <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                            товар в корзину</span></button>
+                      </div>
+
+                      <div class="calculator__total-price number">2038<span class="basket__currency">₽</span>
+                      </div>
+                    </div>
+
+                    <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                        из корзины</span></button>
+                  </li>
+                </ul>
+
+                <div class="basket__bottom">
+                  <h2 class="basket__title">Товаров на сумму</h2>
+
+                  <div class="basket__total-sum number">2038<span class="basket__currency">₽</span></div>
+                </div>
+
+                <button class="basket__order-btn" type="button">Оформить заказ</button>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrambs__link" href="#">
+              Главная
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrambs__link">
+              Каталог товаров
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrambs__link">
+              Каталог товаров
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="catalog">
+      <div class="catalog__inner">
+        <div class="catalog__filters"></div>
+        <div class="catalog__content"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container">
+        <a class="footer__logo logo" href="#">
+          <img class="logo__img" width="200" src="images/logo.svg" alt="лого магазина фрешок">
+        </a>
+
+        <div class="footer__content">
+          <div class="footer__subscribe">
+            <p class="footer__subscribe-text">
+              Следите за нашими акциями
+            </p>
+
+            <form class="footer__form form-subscribe">
+              <label class="sr-only" for="form-subscribe">укажите имейл, чтобы подписаться</label>
+              <input class="form-subscribe__input" id="form-subscribe" name="form-subscribe" type="text"
+                placeholder="email@email.com" required>
+              <button class="form-subscribe__btn btn" type="submit">подписаться</button>
+            </form>
+          </div>
+
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                О нас
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Контакты
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Публичная оферта
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Оплата и доставка
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Вакансии
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Акции
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Отзывы
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Новости
+              </a>
+            </li>
+
+          </ul>
+
+          <address class="footer__contacts contacts">
+            <ul class="contacts__items">
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+7907288365">
+                  Горячая линия +7 907 288 365
+                </a>
+              </li>
+
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  Санкт-Петербург, ул. Ленина, 1
+                </a>
+              </li>
+            </ul>
+
+            <ul class="contacts__social social">
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/social-icons/facebook.svg');" href="#"
+                  target="blank">
+                  <span class="sr-only">перейти на нашу страницу фейсбук</span>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/social-icons/youtube.svg');" href="#"
+                  target="blank">
+                  <span class="sr-only">перейти на наш канал в ютуб</span>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/social-icons/telegram.svg');" href="#"
+                  target="blank">
+                  <span class="sr-only">перейти в нашу группу в телеграм</span>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/social-icons/instagram.svg');" href="#"
+                  target="blank">
+                  <span class="sr-only"> перейти на нашу страницу в инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom footer-bottom">
+      <div class="footer-bottom__container container">
+        <a class="footer-bottom__copy" href="#">
+          © 2021 ФРЕШОК
+        </a>
+
+        <ul class="footer-bottom__inner">
+          <li class="footer-bottom__item">
+            <img class="footer-bottom__img" width="93" height="29" src="images/visa.svg" alt="система платежа виза">
+          </li>
+
+          <li class="footer-bottom__item">
+            <img class="footer-bottom__img" width="49" height="29" src="images/mastercard.svg"
+              alt="система платежа мастеркард">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
