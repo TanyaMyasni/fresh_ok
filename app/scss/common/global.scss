@@ -47,10 +47,6 @@ body {
   flex: 0 0 200px;
   outline: transparent;
 
-  // &__img {
-  //   width: 100%;
-  // }
-
   &:focus {
     box-shadow: 0 0 0 4px rgba($white, 0.5);
     border-radius: 6px;
