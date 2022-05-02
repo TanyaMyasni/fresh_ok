@@ -5,56 +5,16 @@ $(function () {
       $('.product-filter__min-value').text(data.from);
       $('.product-filter__max-value').text(data.to);
     },
-     onChange: function (data) {
+    onChange: function (data) {
       $('.product-filter__min-value').text(data.from);
       $('.product-filter__max-value').text(data.to);
-     },
+    },
   });
 
-  $('.catalog__btn').on('click', function () {
-    $('.catalog__menu').slideToggle();
-    $('.catalog__btn').toggleClass('catalog__btn--active');
+  $('.catalog-menu__btn').on('click', function () {
+    $('.catalog-menu__list').slideToggle();
+    $('.catalog-menu__btn').toggleClass('catalog-menu__btn--active');
     $('.header__catalog').toggleClass('header__catalog::after--active');
-  });
-
-  $('.offers__slider').slick({
-    prevArrow: $('.offers__slider-btn--prev'),
-    nextArrow: $('.offers__slider-btn--next'),
-    fade: true,
-    // dots: true,
-    responsive: [{
-      breakpoint: 992,
-      settings: {
-        arrows: false,
-        dots: true,
-      }
-    }],
-  });
-
-  $('.brends-slider__list').slick({
-    arrows: false,
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 2,
-    responsive: [{
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-      {
-        breakpoint: 786,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-        }
-      }
-    ]
   });
 
   $('.user-nav__link--cart').on('click', function () {
@@ -90,6 +50,84 @@ $(function () {
     $('.product-search').removeClass('active');
     $('.product-search__btn').removeClass('active');
   })
+
+
+  $('.product-filter__btn--categories').on('click', function () {
+    $('.product-filter__list--categories').slideToggle();
+    $('.product-filter__btn--categories').toggleClass('active');
+  });
+
+  $('.product-filter__btn--offers').on('click', function () {
+    $('.product-filter__list--offers').slideToggle();
+    $('.product-filter__btn--offers').toggleClass('active');
+  });
+
+  $('.product-filter__btn--brends').on('click', function () {
+    $('.product-filter__list--brends').slideToggle();
+    $('.product-filter__btn--brends').toggleClass('active');
+  });
+
+  $('.product-filter__btn--price').on('click', function () {
+    $('.product-filter__list--price').slideToggle();
+    $('.product-filter__btnbtn--price').toggleClass('active');
+  });
+
+  $('.catalog-content__btn').on('click', function () {
+    $('.catalog-content__btn').removeClass('catalog-content__btn--active');
+    $(this).addClass('catalog-content__btn--active')
+  });
+
+  $('.catalog-content__btn--small-cards').on('click', function () {
+    $('.catalog-content__items').addClass('list')
+  })
+
+  $('.catalog-content__btn--big-cards').on('click', function () {
+    $('.catalog-content__items').removeClass('list')
+  })
+
+  $('.catalog-content__select').styler();
+
+
+  $('.offers__slider').slick({
+    prevArrow: $('.offers__slider-btn--prev'),
+    nextArrow: $('.offers__slider-btn--next'),
+    fade: true,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        dots: true,
+      }
+    }],
+  });
+
+  $('.brends-slider__list').slick({
+    arrows: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    responsive: [{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 786,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
+
+
 
   var inp = document.querySelector('.product-search__input');
   window.addEventListener('resize', changePlaceholder);

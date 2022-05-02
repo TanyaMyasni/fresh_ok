@@ -1,10 +1,3 @@
-.number {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1;
-  color: $dark-500;
-}
-
 .basket {
   position: absolute;
   display: flex;
@@ -20,6 +13,7 @@
   line-height: 1.2;
   color: $black;
   background-color: $white;
+  // z-index: 100;
 
   @include media-3 {
     top: 110px;
@@ -174,4 +168,11 @@
       }
     }
   }
+}
+
+.number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  color: $dark-500;
 }

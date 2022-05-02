@@ -1,16 +1,25 @@
 .product-filter {
+  width: 300px;
   border: 1px solid $silver-600;
   border-radius: 6px;
   margin-bottom: 30px;
 
-  &__title {
+  &__btn {
+    width: 100%;
+    text-align: left;
     position: relative;
     padding: 18px;
-    font-family: "Ruda", sans-serif;
+    font-family: "Ruda",
+    sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.2;
     border-bottom: 1px solid $silver-600;
+    transition: border-bottom 0.3s;
+
+    &.active {
+      border-bottom: 0px solid $silver-600;
+    }
 
     &::after {
       content: "";
@@ -25,10 +34,17 @@
       mask-size: cover;
       background-color: $silver-600;
       transform: rotate(-90deg);
+      transition: transform 0.3s;
+    }
+
+    &.active {
+      &.product-filter__btn::after {
+        transform: rotate(90deg);
+      }
     }
   }
 
-  &__list {
+  &__list {  
     padding: 18px;
     max-height: 300px;
     overflow-y: scroll;
@@ -44,6 +60,14 @@
     &::-webkit-scrollbar-thumb {
       background-color: $silver-500;
       border-radius: 3px;
+    }
+
+    &:last-child {
+      overflow-y: auto;
+    }
+
+    &--price {
+      padding: 22px 18px 18px;
     }
   }
 
@@ -88,10 +112,6 @@
   &__text {
     display: block;
     margin-left: 36px;
-  }
-
-  &__price-interval {
-    padding: 22px 18px 18px;
   }
 
   &__prices {
