@@ -27,7 +27,7 @@
                   <img class="logo__img" width="200" src="images/burgermenu-logo.svg" alt="лого магазина фрешок">
                 </a>
 
-                <button class="burger-menu__close-btn close-btn"></button>
+                <button class="burger-menu__close-btn close-btn"><span class="sr-only">закрыть меню</span></button>
               </div>
 
               <div class="burger-menu__login login">
@@ -285,102 +285,100 @@
                 <span class="user-nav__number">12</span>
               </button>
             </li>
-
-            <div class="header__overlay overlay">
-              <div class="header__basket basket">
-                <div class="basket__top">
-                  <div class="basket__title-wrap">
-                    <h2 class="basket__title">Корзина</h2>
-
-                    <button class="basket__clean-btn" type="button">очистить корзину</button>
-                  </div>
-
-                  <button class="basket__close-btn close-btn"><span class="sr-only"> закрыть корзину</span></button>
-                </div>
-
-                <ul class="basket__cards">
-                  <li class="basket__card basket-card">
-                    <div class="basket-card__describe">
-                      <img class="basket-card__img" src="images/products/ananas-100.jpg" width="60" height="60"
-                        alt="ананас">
-
-                      <div class="basket-card__info">
-                        <h3 class="basket-card__name">
-                          <a class="basket-card__link" href="#">Ананас, 1кг</a>
-                        </h3>
-                        <div class="basket-card__price number">999<span class="basket__currency">₽</span> </div>
-                      </div>
-                    </div>
-
-                    <div class="basket-card__calculator calculator">
-                      <div class="calculator__counter">
-                        <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
-                            корзины</span></button>
-
-                        <label for="basket-quantity"></label>
-                        <input class="calculator__quantity" type="text" id="basket-quantity" value="98">
-
-                        <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
-                            товар в
-                            корзину</span></button>
-                      </div>
-
-                      <div class="calculator__total-price number">1998<span class="basket__currency">₽</span>
-                      </div>
-                    </div>
-
-
-                    <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
-                        из корзины</span></button>
-                  </li>
-
-                  <li class="basket__card basket-card">
-                    <div class="basket-card__describe">
-                      <img class="basket-card__img" src="images/products/pitahaja.jpg" width="60" height="60"
-                        alt="ананас">
-
-                      <div class="basket-card__info">
-                        <h3 class="basket-card__name">
-                          <a class="basket-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
-                        </h3>
-                        <div class="basket-card__price number">1019<span class="basket__currency">₽</span> </div>
-                      </div>
-                    </div>
-
-                    <div class="basket-card__calculator calculator">
-                      <div class="calculator__counter">
-                        <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
-                            корзины</span></button>
-
-                        <label for="basket-quantity"></label>
-                        <input class="calculator__quantity" type="text" id="basket-quantity" value="0">
-
-                        <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
-                            товар в корзину</span></button>
-                      </div>
-
-                      <div class="calculator__total-price number">2038<span class="basket__currency">₽</span>
-                      </div>
-                    </div>
-
-                    <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
-                        из корзины</span></button>
-                  </li>
-                </ul>
-
-                <div class="basket__bottom">
-                  <h2 class="basket__title">Товаров на сумму</h2>
-
-                  <div class="basket__total-sum number">2038<span class="basket__currency">₽</span></div>
-                </div>
-
-                <button class="basket__order-btn" type="button">Оформить заказ</button>
-              </div>
-            </div>
           </ul>
         </div>
       </div>
     </nav>
+
+    <div class="header__overlay overlay">
+      <div class="header__basket basket">
+        <div class="basket__top">
+          <div class="basket__title-wrap">
+            <h2 class="basket__title">Корзина</h2>
+
+            <button class="basket__clean-btn" type="button">очистить корзину</button>
+          </div>
+
+          <button class="basket__close-btn close-btn"><span class="sr-only"> закрыть корзину</span></button>
+        </div>
+
+        <ul class="basket__cards">
+          <li class="basket__card basket-card">
+            <div class="basket-card__describe">
+              <img class="basket-card__img" src="images/products/ananas-100.jpg" width="60" height="60" alt="ананас">
+
+              <div class="basket-card__info">
+                <h3 class="basket-card__name">
+                  <a class="basket-card__link" href="#">Ананас, 1кг</a>
+                </h3>
+                <div class="basket-card__price number">999<span class="basket__currency">₽</span> </div>
+              </div>
+            </div>
+
+            <div class="basket-card__calculator calculator">
+              <div class="calculator__counter">
+                <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                    корзины</span></button>
+
+                <label for="basket-quantity"></label>
+                <input class="calculator__quantity" type="text" id="basket-quantity" value="98">
+
+                <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                    товар в
+                    корзину</span></button>
+              </div>
+
+              <div class="calculator__total-price number">1998<span class="basket__currency">₽</span>
+              </div>
+            </div>
+
+
+            <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                из корзины</span></button>
+          </li>
+
+          <li class="basket__card basket-card">
+            <div class="basket-card__describe">
+              <img class="basket-card__img" src="images/products/pitahaja.jpg" width="60" height="60" alt="ананас">
+
+              <div class="basket-card__info">
+                <h3 class="basket-card__name">
+                  <a class="basket-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+                </h3>
+                <div class="basket-card__price number">1019<span class="basket__currency">₽</span> </div>
+              </div>
+            </div>
+
+            <div class="basket-card__calculator calculator">
+              <div class="calculator__counter">
+                <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                    корзины</span></button>
+
+                <label for="basket-quantity"></label>
+                <input class="calculator__quantity" type="text" id="basket-quantity" value="0">
+
+                <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                    товар в корзину</span></button>
+              </div>
+
+              <div class="calculator__total-price number">2038<span class="basket__currency">₽</span>
+              </div>
+            </div>
+
+            <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                из корзины</span></button>
+          </li>
+        </ul>
+
+        <div class="basket__bottom">
+          <h2 class="basket__title">Товаров на сумму</h2>
+
+          <div class="basket__total-sum number">2038<span class="basket__currency">₽</span></div>
+        </div>
+
+        <button class="basket__order-btn" type="button">Оформить заказ</button>
+      </div>
+    </div>
   </header>
 
   <main class="main">

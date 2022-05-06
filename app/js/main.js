@@ -18,26 +18,22 @@ $(function () {
   });
 
   $('.user-nav__link--cart').on('click', function () {
-    $('.header__overlay').toggleClass('is-open');
-    $('.basket__close-btn').addClass('is-open');
+    $('.header__overlay').addClass('is-open');
     $('body').toggleClass('lock');
   })
 
   $('.basket__close-btn').on('click', function () {
-    $('.basket__close-btn').removeClass('is-open');
     $('.header__overlay').removeClass('is-open');
     $('body').removeClass('lock');
   })
 
   $('.header-top__burger-btn').on('click', function () {
-    $('.header-top__overlay').toggleClass('is-open');
-    $('.burger-menu__close-btn').addClass('is-open');
+    $('.header-top__overlay').addClass('is-open');
     $('body').toggleClass('lock');
   })
 
   $('.burger-menu__close-btn').on('click', function () {
     $('.header-top__overlay').removeClass('is-open');
-    $('.burger-menu__close-btn').removeClass('is-open');
     $('body').removeClass('lock');
   })
 
@@ -51,25 +47,24 @@ $(function () {
     $('.product-search__btn').removeClass('active');
   })
 
+  $('.product-filter__btn').on('click', function () {
+    $(this).toggleClass('active');
+  })
 
   $('.product-filter__btn--categories').on('click', function () {
     $('.product-filter__list--categories').slideToggle();
-    $('.product-filter__btn--categories').toggleClass('active');
   });
 
   $('.product-filter__btn--offers').on('click', function () {
     $('.product-filter__list--offers').slideToggle();
-    $('.product-filter__btn--offers').toggleClass('active');
   });
 
   $('.product-filter__btn--brends').on('click', function () {
     $('.product-filter__list--brends').slideToggle();
-    $('.product-filter__btn--brends').toggleClass('active');
   });
 
   $('.product-filter__btn--price').on('click', function () {
     $('.product-filter__list--price').slideToggle();
-    $('.product-filter__btnbtn--price').toggleClass('active');
   });
 
   $('.catalog-content__btn').on('click', function () {
@@ -83,6 +78,16 @@ $(function () {
 
   $('.catalog-content__btn--big-cards').on('click', function () {
     $('.catalog-content__items').removeClass('list')
+  })
+
+  $('.catalog-content__btn--filter').on('click', function () {
+    $('.catalog-overlay').addClass('is-open');
+    $('body').toggleClass('lock');
+  })
+
+  $('.catalog-overlay__close-btn').on('click', function () {
+    $('.catalog-overlay').removeClass('is-open');
+    $('body').toggleClass('lock');
   })
 
   $('.catalog-content__select').styler();

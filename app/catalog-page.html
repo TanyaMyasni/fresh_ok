@@ -496,36 +496,21 @@
 
               <ul class="product-filter__list product-filter__list--offers">
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="offers-checkbox-1">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="offers-checkbox-1">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="offers-checkbox-1">
 
-                    <span class="product-filter__text">Со скидкой</span>
-                  </label>
+                  <label class="product-filter__label" for="offers-checkbox-1">Со скидкой</label>
                 </li>
 
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="offers-checkbox-2">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="offers-checkbox-2">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="offers-checkbox-2">
 
-                    <span class="product-filter__text">Новинка</span>
-                  </label>
+                  <label class="product-filter__label" for="offers-checkbox-2">Новинка</label>
                 </li>
 
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="offers-checkbox-3">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="offers-checkbox-3">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="offers-checkbox-3">
 
-                    <span class="product-filter__text">Хит</span>
-                  </label>
+                  <label class="product-filter__label" for="offers-checkbox-3">Хит</label>
                 </li>
               </ul>
             </li>
@@ -537,69 +522,39 @@
 
               <ul class="product-filter__list product-filter__list--brends">
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="brends-checkbox-1">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="brends-checkbox-1">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-1">
 
-                    <span class="product-filter__text">CocaCola</span>
-                  </label>
+                  <label class="product-filter__label" for="brends-checkbox-1">CocaCola</label>
                 </li>
 
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="brends-checkbox-2">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="brends-checkbox-2">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-2">
 
-                    <span class="product-filter__text">Pepsi</span>
-                  </label>
+                  <label class="product-filter__label" for="brends-checkbox-2">Pepsi</label>
                 </li>
 
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="brends-checkbox-3">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="brends-checkbox-3">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-3">
 
-                    <span class="product-filter__text">Sprite</span>
-                  </label>
+                  <label class="product-filter__label" for="brends-checkbox-3">Sprite</label>
                 </li>
 
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="brends-checkbox-4">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="brends-checkbox-4">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-4">
 
-                    <span class="product-filter__text">Fanta</span>
-                  </label>
+                  <label class="product-filter__label" for="brends-checkbox-4">Fanta</label>
                 </li>
 
-                <li class="product-filter__item">
-                  <label class="product-filter__label" for="brends-checkbox-5">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="brends-checkbox-5">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+               <li class="product-filter__item">
+                 <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-5">
 
-                    <span class="product-filter__text">RedBull</span>
-                  </label>
-                </li>
+                 <label class="product-filter__label" for="brends-checkbox-5">RedBull</label>
+               </li>
 
                 <li class="product-filter__item">
-                  <label class="product-filter__label" for="brends-checkbox-6">
-                    <div class="product-filter__box">
-                      <input class="product-filter__input" type="checkbox" id="brends-checkbox-6">
-                      <span class="product-filter__checkbox"></span>
-                    </div>
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-6">
 
-                    <span class="product-filter__text">Dr Pepper</span>
-                  </label>
+                  <label class="product-filter__label" for="brends-checkbox-6">Dr Pepper</label>
                 </li>
               </ul>
             </li>
@@ -636,6 +591,11 @@
           <div class="catalog__content catalog-content">
             <ul class="catalog-content__filters">
               <li class="catalog-content__filter">
+                <button class="catalog-content__btn catalog-content__btn--filter"><span class="sr-only">фильтр
+                    товаров</span></button>
+              </li>
+
+              <li class="catalog-content__filter">
                 <label class="sr-only" for="categories">Сортировать</label>
                 <select class="catalog-content__select" name="categories" id="categories">
                   <option value="name">По названию</option>
@@ -646,16 +606,16 @@
 
               <li class="catalog-content__filter">
                 <label class="sr-only" for="amount">Сортировать</label>
-                <select class="catalog-content__select" name="amount" id="amount">
-                  <option value="12">12</option>
-                  <option value="18">18</option>
-                  <option value="24">24</option>
+                <select class="catalog-content__select" name="amount" id="amount" style="z-index: 1;">
+                  <option value="12">по 12</option>
+                  <option value="18">по 18</option>
+                  <option value="24">по 24</option>
                 </select>
               </li>
 
               <li class="catalog-content__filter">
-                <button class="catalog-content__btn catalog-content__btn--small-cards"><span
-                    class="sr-only"> вид - мелкие карточки</span></button>
+                <button class="catalog-content__btn catalog-content__btn--small-cards"><span class="sr-only"> вид -
+                    мелкие карточки</span></button>
               </li>
 
               <li class="catalog-content__filter">
@@ -678,8 +638,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/body.jpg">
-                    <img class="product-card__img" src="images/products/body.jpg"
-                      alt="экзотическая питахая">
+                    <img class="product-card__img" src="images/products/body.jpg" alt="экзотическая питахая">
                   </a>
 
                   <div class="product-card__info">
@@ -738,8 +697,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/lemon.jpg">
-                    <img class="product-card__img" src="images/products/lemon.jpg"
-                      alt="ароматный лимон">
+                    <img class="product-card__img" src="images/products/lemon.jpg" alt="ароматный лимон">
                   </a>
 
                   <div class="product-card__info">
@@ -798,8 +756,7 @@
 
                   <a class="product-card__link-img" data-fancybox data-width="600px"
                     href="images/products/pitahaja.jpg">
-                    <img class="product-card__img" src="images/products/pitahaja.jpg"
-                      alt="экзотическая питахая">
+                    <img class="product-card__img" src="images/products/pitahaja.jpg" alt="экзотическая питахая">
                   </a>
 
                   <div class="product-card__info">
@@ -857,8 +814,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/carrot.jpg">
-                    <img class="product-card__img" src="images/products/carrot.jpg"
-                      alt="морковка с бабушкиной грядки">
+                    <img class="product-card__img" src="images/products/carrot.jpg" alt="морковка с бабушкиной грядки">
                   </a>
 
                   <div class="product-card__info">
@@ -977,8 +933,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/coffee.jpg">
-                    <img class="product-card__img" src="images/products/coffee.jpg"
-                      alt="кофе с коноплей">
+                    <img class="product-card__img" src="images/products/coffee.jpg" alt="кофе с коноплей">
                   </a>
 
                   <div class="product-card__info">
@@ -1036,8 +991,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/paprik.jpg">
-                    <img class="product-card__img" src="images/products/paprik.jpg"
-                      alt="паприка оранжевая">
+                    <img class="product-card__img" src="images/products/paprik.jpg" alt="паприка оранжевая">
                   </a>
 
                   <div class="product-card__info">
@@ -1095,8 +1049,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/ketchup.jpg">
-                    <img class="product-card__img" src="images/products/ketchup.jpg"
-                      alt="кетчуп для детей">
+                    <img class="product-card__img" src="images/products/ketchup.jpg" alt="кетчуп для детей">
                   </a>
 
                   <div class="product-card__info">
@@ -1156,8 +1109,7 @@
 
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/ananas.jpg">
-                    <img class="product-card__img" src="images/products/ananas.jpg"
-                      alt="сочный ананас">
+                    <img class="product-card__img" src="images/products/ananas.jpg" alt="сочный ананас">
                   </a>
 
                   <div class="product-card__info">
@@ -1215,8 +1167,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/carrot.jpg">
-                    <img class="product-card__img" src="images/products/carrot.jpg"
-                      alt="морковка с бабушкиной грядки">
+                    <img class="product-card__img" src="images/products/carrot.jpg" alt="морковка с бабушкиной грядки">
                   </a>
 
                   <div class="product-card__info">
@@ -1335,8 +1286,7 @@
                   </button>
 
                   <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/coffee.jpg">
-                    <img class="product-card__img" src="images/products/coffee.jpg"
-                      alt="кофе с коноплей">
+                    <img class="product-card__img" src="images/products/coffee.jpg" alt="кофе с коноплей">
                   </a>
 
                   <div class="product-card__info">
@@ -1383,7 +1333,7 @@
             </ul>
 
             <div class="catalog-content__more">
-              <button class="catalor-conent__more-btn btn" type="button">Показать еще</button>
+              <button class="catalog-content__more-btn btn" type="button">Показать еще</button>
 
               <div class="catalog-content__pagination pagination">
                 <a class="pagination__arrow pagination__arrow--prev" href="#"></a>
@@ -1409,52 +1359,242 @@
                     <a class="pagination__link" href="#">10</a>
                   </li>
                 </ul>
-                
+
                 <a class="pagination__arrow pagination__arrow--on pagination__arrow--next" href="#"></a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="catalog-overlay  overlay">
+
+        <div class="catalog-overlay__inner">
+          <button class="catalog-overlay__close-btn close-btn" type="button">
+            <span class="sr-only">закрыть фильтры</span>
+          </button>
+
+          <ul class="catalog-overlay__filters">
+            <li class="catalog__categories-filter product-filter">
+              <button class="product-filter__btn product-filter__btn--categories">
+                Категории
+              </button>
+
+
+              <ul class="product-filter__list product-filter__list--categories">
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Овощи и фрукты
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Бакалея
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Молочные продукты
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Хлеб
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Мясо
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Колбаса
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Рыба
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Алкоголь
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Напитки
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Торты
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Мясо
+                  </button>
+                </li>
+
+                <li class="product-filter__item">
+                  <button class="product-filter__item-btn" type="button">
+                    Чай, кофе
+                  </button>
+                </li>
+              </ul>
+            </li>
+
+            <li class="catalog__offers-filter product-filter">
+              <button class="product-filter__btn product-filter__btn--offers">
+                Предложения
+              </button>
+
+              <ul class="product-filter__list product-filter__list--offers">
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="offers-checkbox-1">
+
+                  <label class="product-filter__label" for="offers-checkbox-1">Со скидкой</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="offers-checkbox-2">
+
+                  <label class="product-filter__label" for="offers-checkbox-2">Новинка</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="offers-checkbox-3">
+
+                  <label class="product-filter__label" for="offers-checkbox-3">Хит</label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="catalog__brends-filter product-filter">
+              <button class="product-filter__btn product-filter__btn--brends">
+                Бренд
+              </button>
+
+              <ul class="product-filter__list product-filter__list--brends">
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-1">
+
+                  <label class="product-filter__label" for="brends-checkbox-1">CocaCola</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-2">
+
+                  <label class="product-filter__label" for="brends-checkbox-2">Pepsi</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-3">
+
+                  <label class="product-filter__label" for="brends-checkbox-3">Sprite</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-4">
+
+                  <label class="product-filter__label" for="brends-checkbox-4">Fanta</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-5">
+
+                  <label class="product-filter__label" for="brends-checkbox-5">RedBull</label>
+                </li>
+
+                <li class="product-filter__item">
+                  <input class=" product-filter__custom-checkbox" type="checkbox" id="brends-checkbox-6">
+
+                  <label class="product-filter__label" for="brends-checkbox-6">Dr Pepper</label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="catalog__price-filter product-filter">
+              <button class="product-filter__btn product-filter__btn--price">
+                Цена
+              </button>
+
+              <div class="product-filter__list product-filter__list--price">
+                <ul class=" product-filter__prices">
+                  <li class="product-filter__price">
+                    от
+                    <span class="product-filter__min-value"></span>
+                    ₽
+                  </li>
+
+                  <li class="product-filter__price">
+                    до
+                    <span class="product-filter__max-value"></span>
+                    ₽
+                  </li>
+                </ul>
+
+                <form class="product-filter__scale">
+                  <label class="sr-only" for="scale-input">шкала цен</label>
+                  <input class="product-filter__scale-input" type="text" id="scale-input" data-min="50" data-max="1200"
+                    data-from="100" data-to="1000">
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-     <section class="services">
-       <div class="container">
-         <h2 class="sr-only">услуги магазина фрешОк</h2>
+    <section class="services">
+      <div class="container">
+        <h2 class="sr-only">услуги магазина фрешОк</h2>
 
-         <ul class="services__items">
-           <li class="services__item services__item--scooter">
-             <h3 class="services__item-title">
-               Бесплатная доставка
-             </h3>
+        <ul class="services__items">
+          <li class="services__item services__item--scooter">
+            <h3 class="services__item-title">
+              Бесплатная доставка
+            </h3>
 
-             <p class="services__item-text">
-               Для заказов на сумму от 500 ₽
-             </p>
-           </li>
+            <p class="services__item-text">
+              Для заказов на сумму от 500 ₽
+            </p>
+          </li>
 
-           <li class="services__item services__item--return">
-             <h3 class="services__item-title">
-               Возврат товара
-             </h3>
+          <li class="services__item services__item--return">
+            <h3 class="services__item-title">
+              Возврат товара
+            </h3>
 
-             <p class="services__item-text">
-               Если товары были испорчены
-             </p>
-           </li>
+            <p class="services__item-text">
+              Если товары были испорчены
+            </p>
+          </li>
 
-           <li class="services__item services__item--hours">
-             <h3 class="services__item-title">
-               Поддержка 24/7
-             </h3>
+          <li class="services__item services__item--hours">
+            <h3 class="services__item-title">
+              Поддержка 24/7
+            </h3>
 
-             <p class="services__item-text">
-               Лучшие операторы
-             </p>
-           </li>
-         </ul>
-       </div>
-     </section>
+            <p class="services__item-text">
+              Лучшие операторы
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__top">

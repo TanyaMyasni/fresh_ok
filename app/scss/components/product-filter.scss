@@ -10,10 +10,11 @@
     position: relative;
     padding: 18px;
     font-family: "Ruda",
-    sans-serif;
+      sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.2;
+    letter-spacing: 0.03em;
     border-bottom: 1px solid $silver-600;
     transition: border-bottom 0.3s;
 
@@ -44,9 +45,9 @@
     }
   }
 
-  &__list {  
-    padding: 18px;
-    max-height: 300px;
+  &__list {
+    padding:  16px 15px 17px;
+    max-height: 296px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
@@ -71,17 +72,90 @@
     }
   }
 
+  // &__checkbox-item
+
   &__item {
     font-weight: 400;
     line-height: 1.3;
 
     &:not(:last-child) {
-      padding-bottom: 12px;
+      margin-bottom: 11px;
     }
+  }
+
+  &__item-btn {
+    letter-spacing: 0.03em;
   }
 
   &__label {
     cursor: pointer;
+  }
+
+
+  &__custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &+.product-filter {
+      &__label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+
+        &::before {
+          content: "";
+          margin-right: 12px;
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          background-color: $silver-100;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 50% 50%;
+          border: 1px solid $silver-600;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    &:checked {
+      &+.product-filter {
+        &__label {
+          &::before {
+            border-color: $dark-500;
+          }
+        }
+      }
+    }
+
+    &:checked {
+      &+.product-filter {
+        &__label {
+          &::before {
+            background-image: url("../images/sprite.svg#icon-checked");
+          }
+        }
+      }
+    }
+
+    // &:checked {
+    //   &+.product-filter {
+    //     &__label {
+    //       &::after {
+    //         content: "";
+    //         width: 12px;
+    //         height: 9px;
+    //         background-color: $dark-500;
+    //         mask-image: url('../images/sprite.svg#icon-checked');
+    //         mask-repeat: no-repeat;
+    //         mask-position: center;
+    //         mask-size: contain;
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   &__input {
@@ -91,27 +165,13 @@
     height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
-    
-    &:checked + .product-filter__checkbox {
+
+    &:checked+.product-filter__checkbox {
       border-color: $dark-500;
       background-image: url("../images/icons/icon-checked.svg");
       background-repeat: no-repeat;
       background-position: center;
     }
-  }
-
-  &__checkbox {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background-color: $silver-100;
-    border: 1px solid $silver-600;
-    border-radius: 3px;
-  }
-
-  &__text {
-    display: block;
-    margin-left: 36px;
   }
 
   &__prices {

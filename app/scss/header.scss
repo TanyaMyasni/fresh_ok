@@ -167,7 +167,7 @@
     background-color: $green-900;
 
     @include media-2 {
-      padding: 10px 0;
+      padding: 11px 0;
     }
 
     @include media-5 {
@@ -311,15 +311,15 @@
 
 .user-nav {
   display: flex;
-  margin-left: 15px;
+  margin: 0 -15px 0 12px;
 
   @include media-2 {
-    margin-right: 6px;
+    margin-right: -6px;
   }
 
   &__item {
     &:not(:last-child) {
-      padding-right: 12px;
+      margin-right: 12px;
     }
   }
 
