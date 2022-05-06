@@ -27,17 +27,17 @@
                   <img class="logo__img" width="200" src="images/burgermenu-logo.svg" alt="лого магазина фрешок">
                 </a>
 
-                <button class="burger-menu__close-btn close-btn"></button>
+                <button class="burger-menu__close-btn close-btn"><span class="sr-only">закрыть меню</span></button>
               </div>
 
-              <div class="burger-menu__breadcrumbs breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link breadcrumbs__link--enter" href="#">Вход</a>
+              <div class="burger-menu__login login">
+                <ul class="login__list">
+                  <li class="login__item">
+                    <a class="login__link login__link--enter" href="#">Вход</a>
                   </li>
 
-                  <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link breadcrumbs__link--login" href="#">Регистрация</a>
+                  <li class="login__item">
+                    <a class="login__link login__link--login" href="#">Регистрация</a>
                   </li>
                 </ul>
               </div>
@@ -175,87 +175,87 @@
             <img class="logo__img" src="images/logo-short.svg" width="37" heght="40" alt="лого магазина фрешок">
           </a>
 
-          <div class="header__catalog catalog">
-            <button class="catalog__btn">
+          <div class="header__catalog-menu catalog-menu">
+            <button class="catalog-menu__btn">
               Каталог продуктов
             </button>
 
-            <ul class="catalog__menu">
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+            <ul class="catalog-menu__list">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Овощи и фрукты
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Бакалея
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Молочные продукты
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Хлеб
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Колбаса
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Рыба
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Алкоголь
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Напитки
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Торты
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Мясо
                 </a>
               </li>
 
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">
                   Чай, кофе
                 </a>
               </li>
             </ul>
           </div>
 
-          <form class="header__form form">
-            <label class="sr-only" for="form-search">ввести наименование товара</label>
+          <form class="header__product-search product-search">
+            <label class="sr-only" for="product-search">ввести наименование товара</label>
 
-            <input class="form__input " type="search" id="form-search" name="form-search"
+            <input class="product-search__input " type="search" id="product-search" name="product-search"
               placeholder="Найти в магазине ..." required>
 
-            <button class="form__btn" type="submit">поиск</button>
+            <button class="product-search__btn" type="submit">поиск</button>
           </form>
 
 
@@ -299,7 +299,7 @@
             <button class="basket__clean-btn" type="button">очистить корзину</button>
           </div>
 
-          <button class="basket__close-btn close-btn"></button>
+          <button class="basket__close-btn close-btn"><span class="sr-only"> закрыть корзину</span></button>
         </div>
 
         <ul class="basket__cards">
@@ -315,21 +315,26 @@
               </div>
             </div>
 
-            <div class="basket-card__calculator">
-              <div class="basket-card__counter">
-                <button class="basket-card__minus-btn btn" type="button"></button>
+            <div class="basket-card__calculator calculator">
+              <div class="calculator__counter">
+                <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                    корзины</span></button>
 
                 <label for="basket-quantity"></label>
-                <input class="basket-card__quantity" type="text" id="basket-quantity" value="2">
+                <input class="calculator__quantity" type="text" id="basket-quantity" value="98">
 
-                <button class="basket-card__plus-btn btn" type="button"></button>
+                <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                    товар в
+                    корзину</span></button>
               </div>
 
-              <div class="basket-card__total-price number">1998<span class="basket__currency">₽</span>
-                <div>
-                </div>
+              <div class="calculator__total-price number">1998<span class="basket__currency">₽</span>
+              </div>
+            </div>
 
-                <button class="basket-card__delete-btn close-btn" type="button"></button>
+
+            <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                из корзины</span></button>
           </li>
 
           <li class="basket__card basket-card">
@@ -344,21 +349,24 @@
               </div>
             </div>
 
-            <div class="basket-card__calculator">
-              <div class="basket-card__counter">
-                <button class="basket-card__minus-btn btn" type="button"></button>
+            <div class="basket-card__calculator calculator">
+              <div class="calculator__counter">
+                <button class="calculator__minus-btn btn" type="button"><span class="sr-only">отнять товар из
+                    корзины</span></button>
 
                 <label for="basket-quantity"></label>
-                <input class="basket-card__quantity" type="text" id="basket-quantity" value="2">
+                <input class="calculator__quantity" type="text" id="basket-quantity" value="0">
 
-                <button class="basket-card__plus-btn btn" type="button"></button>
+                <button class="calculator__plus-btn btn" type="button"><span class="sr-only">добавить подобный
+                    товар в корзину</span></button>
               </div>
 
-              <div class="basket-card__total-price number">2038<span class="basket__currency">₽</span>
-              <div>
+              <div class="calculator__total-price number">2038<span class="basket__currency">₽</span>
+              </div>
             </div>
 
-            <button class="basket-card__delete-btn close-btn" type="button"></button>
+            <button class="basket-card__delete-btn close-btn" type="button"><span class="sr-only">Удалить товар
+                из корзины</span></button>
           </li>
         </ul>
 
@@ -378,69 +386,74 @@
 
     <section class="offers">
       <h2 class="sr-only">слайдер. Актуальные акции магазина фрешОк</h2>
-      <button class="offers__slider-btn offers__slider-btn--prev" type="button">
+      <button class="offers__slider-btn offers__slider-btn--prev arrow-btn arrow-btn--prev" type="button">
         <span class="sr-only">
           предидущий слайд
         </span>
       </button>
 
       <ul class="offers__slider">
-        <li class="offers__slide" style="background-image: url('../images/slider/slider-bg-carrot.jpg')">
-          <div class="offers__container container">
-            <div class="offers__content">
-              <h3 class="offers__title">
-                СВЕЖАЧОК ВАМ в ХАТУ
-                <span>Скидка -50%</span>
-              </h3>
+        <li class="offers__slide">
+          <div class="offers__slide-inner" style="background-image: url('../images/slider/slider-bg-carrot.jpg')">
+            <div class="offers__container container">
+              <div class="offers__content">
+                <h3 class="offers__title">
+                  СВЕЖАЧОК ВАМ в ХАТУ
+                  <span>Скидка -50%</span>
+                </h3>
 
-              <p class="offers__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
+                <p class="offers__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
 
-              <button class="offers__btn btn" type="button">
-                Купить сейчас
-              </button>
+                <button class="offers__btn btn" type="button">
+                  Купить сейчас
+                </button>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="offers__slide" style="background-image: url('../images/slider/slider-bg-tomatoes.jpg')">
-          <div class="offers__container container">
-            <div class="offers__content">
-              <h3 class="offers__title">
-                НАКРУТИ СЕБЕ ТОМАТОВ
-                <span>АКЦИЯ: 3 кг по цене 1</span>
-              </h3>
+        <li class="offers__slide">
+          <div class="offers__slide-inner" style="background-image: url('../images/slider/slider-bg-tomatoes.jpg')">
+            <div class="offers__container container">
+              <div class="offers__content">
+                <h3 class="offers__title">
+                  НАКРУТИ СЕБЕ ТОМАТОВ
+                  <span>АКЦИЯ: 3 кг по цене 1</span>
+                </h3>
 
-              <p class="offers__text">
-                Только с 12 по 15 июля скидка на домашние помидорчики
-              </p>
+                <p class="offers__text">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
 
-              <a class="offers__btn btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="offers__btn btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="offers__slide" style="background-image: url('../images/slider/slider-bg-greenery.jpg')">
-          <div class="offers__container container">
-            <div class="offers__content">
-              <h3 class="offers__title">
-                Пусть остальные
-                позеленеют от зависти
-                <span>Распродажа зелени</span>
-              </h3>
+        <li class="offers__slide">
+          <div class="offers__slide-inner" style="background-image: url('../images/slider/slider-bg-greenery.jpg')">
+            <div class="offers__container container">
+              <div class="offers__content">
+                <h3 class="offers__title">
+                  Пусть остальные позеленеют от зависти
+                  <span>Распродажа зелени</span>
+                </h3>
 
-              <a class="offers__btn btn" href="#">
-                Купить сейчас
-              </a>
+                <a class="offers__btn btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
         </li>
       </ul>
 
-      <button class="offers__slider-btn offers__slider-btn--next " type="button">
+      <button class="offers__slider-btn offers__slider-btn--next arrow-btn arrow-btn--next" type="button">
         <span class="sr-only">
           следующий слайд
         </span>
@@ -941,7 +954,7 @@
                 <li class="badges__item badges__item--sale ">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/ananas-100.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/ananas-100.jpg"
                   alt="кофе с коноплей">
               </a>
@@ -991,7 +1004,7 @@
                 <li class="badges__item badges__item--sale ">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/coffee.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/coffee.jpg"
                   alt="кофе с коноплей">
               </a>
@@ -1043,7 +1056,7 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/strawberry.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/strawberry.jpg"
                   alt="спелая ароматная клубника">
               </a>
@@ -1093,7 +1106,7 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/mango.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/mango.jpg"
                   alt="экзотический манго">
               </a>
@@ -1143,7 +1156,7 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/salmon.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/salmon.jpg"
                   alt="Свежий лосось">
               </a>
@@ -1193,7 +1206,7 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/vegetables-juice.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/vegetables-juice.jpg"
                   alt="овощной сок">
               </a>
@@ -1244,7 +1257,7 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/fruit-basket.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/fruit-basket.jpg"
                   alt="Фруктовая корзина">
               </a>
@@ -1294,7 +1307,7 @@
                 <li class="badges__item badges__item--sale">-50%</li>
               </ul>
 
-              <a class="product-card__link-img" href="#">
+              <a class="product-card__link-img" data-fancybox data-width="600px" href="images/products/pork.jpg">
                 <img class="product-card__img" width="100" height="100" src="images/products/pork.jpg"
                   alt="Свинина мякоть">
               </a>

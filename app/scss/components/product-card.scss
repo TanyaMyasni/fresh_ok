@@ -7,6 +7,7 @@
   padding-top: 56px;
   font-size: 14px;
   font-weight: 600;
+  letter-spacing: 0.03em;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   transition: border-color 0.3s;
@@ -20,16 +21,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 11px;
+    top: 10px;
     right: 5px;
     width: 44px;
     height: 44px;
-    z-index: 2;
+    // z-index: 2;
     outline: transparent;
 
     @include media-3 {
       top: 8px;
-      right: 0px;
+      right: 0;
       width: 40px;
       height: 40px;
     }
@@ -116,6 +117,7 @@
 
     &:focus,
     &:hover {
+
       &::before,
       &::after {
         opacity: 1;
@@ -136,6 +138,17 @@
     object-fit: contain;
   }
 
+  &__extra-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+
+    @include media-4 {
+      margin-bottom: 9px;
+    }
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -153,6 +166,10 @@
     flex-grow: 1;
     font-size: 14px;
     font-weight: 600;
+
+    @include media-4 {
+      padding-bottom: 48px;
+    }
   }
 
   &__link {
@@ -203,6 +220,14 @@
     font-weight: 700;
     line-height: 1;
 
+    @include media-4 {
+      padding-right: 14px;
+    }
+
+    @include media-4 {
+      font-size: 10px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -215,6 +240,11 @@
       mask-position: center;
       mask-size: cover;
       background-color: $yellow-900;
+
+      @include media-4 {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 }
@@ -223,7 +253,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  z-index: 1;
+  z-index: 0;
 
   &__item {
     display: none;
@@ -265,6 +295,10 @@
     font-size: 10px;
     line-height: 1;
     text-transform: uppercase;
+
+    @include media-4 {
+      font-size: 8px;
+    }
 
     &--is {
       color: $green-800;

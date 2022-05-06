@@ -1,4 +1,4 @@
-.form {
+.product-search {
   position: relative;
   display: flex;
   max-width: 576px;
@@ -100,7 +100,7 @@
     }
 
     &:active {
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
       background-color: $dark-800;
       color: rgba($white, 0.5);
     }
