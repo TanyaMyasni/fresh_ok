@@ -154,7 +154,7 @@
       }
     }
   }
-  
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -311,7 +311,6 @@
 
 .user-nav {
   display: flex;
-  margin: 0 -15px 0 12px;
 
   @include media-2 {
     margin-right: -6px;
@@ -319,7 +318,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 12px;
+      margin-right: 10px;
     }
   }
 
@@ -334,8 +333,8 @@
     transition: box-shadow 0.3s, border-color 0.3s;
 
     @include media-2 {
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
     }
 
     &::before {
@@ -386,6 +385,7 @@
       @include media-2 {
         margin-right: 8px;
       }
+
       &::before {
         mask-image: url('../images/sprite.svg#icon-heart');
       }

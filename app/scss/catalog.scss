@@ -1,5 +1,5 @@
 .catalog {
-  padding: 48px 0 72px ;
+  padding: 48px 0 72px;
 
   @include media-1 {
     padding: 30px 0 34px;
@@ -29,7 +29,7 @@
   }
 
   &__filters {
-    
+
     margin-right: 30px;
 
     @include media-1 {
@@ -38,16 +38,6 @@
 
     @include media-2 {
       display: none;
-    }
-  }
-
-  &__offers-filter,
-  &__brends-filter {
-    .product-filter {
-      line-height: 1.2;
-      &__item {
-        margin-bottom: 5px;
-      }
     }
   }
 }
@@ -68,13 +58,25 @@
   }
 
   &__filter {
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+  }
+
+  &__filter,
+  &__view-filter {
     &:not(:last-child) {
       margin-right: 15px;
+      z-index: 2;
 
       @include media-3 {
         margin-right: 10px;
       }
     }
+  }
+
+  &__view-filters {
+    display: flex;
   }
 
   &__items {
@@ -138,20 +140,21 @@
       }
     }
 
-     &--small-cards {
-       @include media-2 {
-         display: none;
-       }
+    &--small-cards {
+      @include media-2 {
+        display: none;
+      }
 
-       &::after {
-         mask-image: url("../images/sprite.svg#icon-small-table");
-       }
-     }
+      &::after {
+        mask-image: url("../images/sprite.svg#icon-small-table");
+      }
+    }
 
     &--big-cards {
       @include media-2 {
         display: none;
       }
+
       &::after {
         mask-image: url("../images/sprite.svg#icon-big-table");
       }
@@ -173,9 +176,11 @@
 
         @include media-4 {
           margin-top: -7px;
+          padding-bottom: 48px;
         }
       }
     }
+
     .presence {
       margin-bottom: 0;
     }
@@ -211,19 +216,19 @@
     }
 
     &__link-img {
-      flex: 0 0 200px;
-      width: 200px;
+      max-width: 200px;
+      width: 100%;
       height: 150px;
       padding-bottom: 0;
     }
-    
+
     &__extra-info {
       margin: 6px 0 14px;
     }
 
     &__info {
-      flex-grow: 1;
       padding: 0 12px 6px;
+      width: 100%;
     }
 
     &__name {
@@ -263,7 +268,19 @@
 }
 
 .jq-selectbox {
-  z-index: 1;
+  // border: 1px solid $silver-600;
+  // border-radius: 3px;
+}
+
+.jq-selectbox.opened {
+  .jq-selectbox__select {
+    border-color: $dark-500;
+    border-radius: 3px 3px 0 0;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    transform: rotate(-90deg);
+  }
 }
 
 .jq-selectbox__select {
@@ -286,25 +303,19 @@
     font-size: 12px;
   }
 
-  &:focus {
-    border: 1px solid $silver-600;
-  }
-
   &:hover {
     background: transparent;
   }
 }
 
-.jq-selectbox li {
-  color: $dark-500;
-
-  &:hover {
-    background-color: $dark-800;
-  }
+.focused .jq-selectbox__select {
+  border: 1px solid $silver-600;
+  box-shadow: 0 0 0 3px $green-200;
 }
 
 .jq-selectbox__trigger {
   border-left: none;
+  transition: transform 0.3s;
 }
 
 .jq-selectbox__trigger-arrow {
@@ -323,9 +334,45 @@
 }
 
 .jq-selectbox__dropdown {
+  width: 100%;
+  margin: 0;
+  padding: 8px 0;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   color: $dark-500;
-}
+  overflow-y: hidden;
+  background: $white;
+  border: 1px solid #C1C1C1;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: none;
 
+  @include media-3 {
+    font-size: 12px;
+  }
+
+  & ul {
+    overflow: hidden;
+    position: relative;
+    overflow: auto;
+  }
+
+  & li {
+    padding: 7px 15px;
+    color: $dark-500;
+    transition: color 0.3s, background-color 0.3s;
+
+    @include media-3 {
+      padding: 7px 7px;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $dark-800;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+  }
+}

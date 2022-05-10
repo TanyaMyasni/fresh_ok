@@ -32,14 +32,15 @@
     display: flex;
     align-items: center;
     height: 600px;
-    
+
     @include media-1 {
       padding: 130px;
     }
 
     @include media-3 {
+      padding: 60px 0 51px;
+      align-items: start;
       height: 321px;
-      padding: 0;
     }
 
     @include media-5 {
@@ -57,7 +58,6 @@
     border-radius: 4px;
 
     @include media-3 {
-      margin-top: 15px;
       padding: 15px;
       border-radius: 0;
     }
@@ -114,7 +114,7 @@
 
   &__btn {
     @include media-3 {
-      font-size: 14px; 
+      font-size: 14px;
     }
   }
 

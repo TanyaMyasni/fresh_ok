@@ -166,10 +166,6 @@
     flex-grow: 1;
     font-size: 14px;
     font-weight: 600;
-
-    @include media-4 {
-      padding-bottom: 48px;
-    }
   }
 
   &__link {
@@ -253,7 +249,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  z-index: 0;
+  z-index: 1;
 
   &__item {
     display: none;

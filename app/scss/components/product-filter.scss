@@ -46,7 +46,7 @@
   }
 
   &__list {
-    padding:  16px 15px 17px;
+    padding: 18px;
     max-height: 296px;
     overflow-y: scroll;
 
@@ -71,8 +71,6 @@
       padding: 22px 18px 18px;
     }
   }
-
-  // &__checkbox-item
 
   &__item {
     font-weight: 400;
@@ -99,7 +97,7 @@
 
     &+.product-filter {
       &__label {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         user-select: none;
 
