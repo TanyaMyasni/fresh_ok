@@ -13,7 +13,6 @@
   line-height: 1.2;
   color: $black;
   background-color: $white;
-  // z-index: 100;
 
   @include media-3 {
     top: 110px;
@@ -40,7 +39,6 @@
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
-
     }
 
     &:hover {
@@ -124,16 +122,14 @@
   &__describe,
   &__calculator {
     display: flex;
-    
   }
 
   &__info {
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    
+
     @include media-4 {
       padding-right: 15px;
       flex-grow: 1;

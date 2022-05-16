@@ -1,14 +1,59 @@
 $(function () {
-  $('.product-filter__scale-input').ionRangeSlider({
+  const $scaleInput = $('.product-filter__scale-input');
+  const $inputMin = $('.product-filter__min-value');
+  const $inputMax = $('.product-filter__max-value');
+  const min = 50;
+  const max = 1200;
+  let instance;
+  let from = 0;
+  let to = 0
+
+  $scaleInput.ionRangeSlider({
     type: "double",
-    onStart: function (data) {
-      $('.product-filter__min-value').text(data.from);
-      $('.product-filter__max-value').text(data.to);
-    },
-    onChange: function (data) {
-      $('.product-filter__min-value').text(data.from);
-      $('.product-filter__max-value').text(data.to);
-    },
+    min: min,
+    max: max,
+    from: 100,
+    to: 1100,
+    onStart: updateInputs,
+    onChange: updateInputs,
+  });
+
+  instance = $scaleInput.data("ionRangeSlider");
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputMin.prop("value", from);
+    $inputMax.prop("value", to);
+  }
+
+  $inputMin.on("input", function () {
+    let val = $(this).prop("value");
+
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
+  });
+
+  $inputMax.on("input", function () {
+    let val = $(this).prop("value");
+
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
   });
 
   $('.catalog-menu__btn').on('click', function () {
@@ -49,23 +94,8 @@ $(function () {
 
   $('.product-filter__btn').on('click', function () {
     $(this).toggleClass('active');
+    $(this).next('.product-filter__list').slideToggle();
   })
-
-  $('.product-filter__btn--categories').on('click', function () {
-    $('.product-filter__list--categories').slideToggle();
-  });
-
-  $('.product-filter__btn--offers').on('click', function () {
-    $('.product-filter__list--offers').slideToggle();
-  });
-
-  $('.product-filter__btn--brends').on('click', function () {
-    $('.product-filter__list--brends').slideToggle();
-  });
-
-  $('.product-filter__btn--price').on('click', function () {
-    $('.product-filter__list--price').slideToggle();
-  });
 
   $('.catalog-content__btn').on('click', function () {
     $('.catalog-content__btn').removeClass('catalog-content__btn--active');
@@ -73,20 +103,15 @@ $(function () {
   });
 
   $('.catalog-content__btn--small-cards').on('click', function () {
-    $('.catalog-content__items').addClass('list')
+    $('.catalog-content__items').addClass('catalog-content__items--list')
   })
 
   $('.catalog-content__btn--big-cards').on('click', function () {
-    $('.catalog-content__items').removeClass('list')
+    $('.catalog-content__items').removeClass('catalog-content__items--list')
   })
 
-  $('.catalog-content__btn--filter').on('click', function () {
-    $('.catalog-overlay').addClass('is-open');
-    $('body').toggleClass('lock');
-  })
-
-  $('.catalog-overlay__close-btn').on('click', function () {
-    $('.catalog-overlay').removeClass('is-open');
+  $('.catalog__close-btn').on('click', function () {
+    $('.catalog__filters').removeClass('is-open');
     $('body').toggleClass('lock');
   })
 
