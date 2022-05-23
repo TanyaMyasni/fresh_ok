@@ -121,15 +121,6 @@
         &__label {
           &::before {
             border-color: $dark-500;
-          }
-        }
-      }
-    }
-
-    &:checked {
-      &+.product-filter {
-        &__label {
-          &::before {
             background-image: url("../images/sprite.svg#icon-checked");
           }
         }
