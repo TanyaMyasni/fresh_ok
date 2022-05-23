@@ -1,0 +1,30 @@
+.presence {
+  margin-bottom: 4px;
+
+  &__item {
+    display: none;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include media-4 {
+      font-size: 8px;
+    }
+
+    &--is {
+      color: $green-800;
+    }
+
+    &--not {
+      color: $silver-600;
+    }
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--on {
+      display: block;
+    }
+  }
+}

@@ -8,12 +8,16 @@
 
 @import 'components/burger-menu.scss';
 @import 'components/breadcrumbs.scss';
-@import 'components/product-search.scss';
+@import 'components/badges.scss';
 @import 'components/basket.scss';
 @import 'components/calculator.scss';
 @import 'components/cards-filter.scss';
+@import 'components/favorites.scss';
+@import 'components/presence.scss';
+@import 'components/prices.scss';
 @import 'components/product-card.scss';
 @import 'components/product-filter.scss';
+@import 'components/product-search.scss';
 @import 'components/social.scss';
 
 @import 'header';
@@ -26,7 +30,6 @@
 @import 'brends-slider';
 @import 'news';
 @import 'catalog';
+@import 'product';
 
 @import 'footer';
-
-

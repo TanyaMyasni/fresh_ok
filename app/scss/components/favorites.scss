@@ -1,0 +1,57 @@
+.favorites {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 5px;
+  width: 44px;
+  height: 44px;
+  outline: transparent;
+
+  @include media-3 {
+    top: 8px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 30px;
+    mask-image: url('../images/sprite.svg#icon-heart');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    background-color: $silver-600;
+    transition: background-color 0.3s;
+
+    @include media-3 {
+      width: 24px;
+      height: 22px;
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px $green-200;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    box-shadow: none;
+
+    &::before {
+      background-color: $yellow-900;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+
+    &::before {
+      background-color: rgba($yellow-900, 0.5);
+    }
+  }
+}
