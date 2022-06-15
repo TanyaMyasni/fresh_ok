@@ -259,13 +259,17 @@ $(function () {
       el: '.swiper-pagination',
       clickable: true,
     },
-    slidesPerView: 2,
+    slidesPerView: 4,
     slidesPerGroup: 2,
 
     loop: true,
     autoHeight: true,
-    spaceBetween: 5,
+    spaceBetween: 30,
     breakpoints: {
+      300: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
       576: {
         spaceBetween: 10,
         slidesPerView: 3,

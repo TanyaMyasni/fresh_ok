@@ -3,7 +3,7 @@
   border-bottom: 1px solid $silver-600;
 
   @include media-1 {
-    padding: 30px 0;
+    padding: 30px 0 26px;
   }
 
   &__container {
@@ -28,18 +28,14 @@
 
     @include media-1 {
       margin-bottom: 30px;
-      padding: 20px 75px;
+      padding: 19px 75px;
       max-width: 100%;
     }
 
     @include media-3 {
-      padding: 20px 37px;
+      padding: 19px 37px;
     }
   }
-
-  &__slider-wrapper {}
-
-  &__slide {}
 
   &__link {
     display: block;
@@ -97,6 +93,10 @@
     letter-spacing: 0.03em;
     line-height: 1.2;
     text-transform: none;
+
+    @include media-3 {
+      font-size: 26px;
+    }
   }
 
   &__name-title {
@@ -176,6 +176,7 @@
 
   &__presence {
     align-self: end;
+
 
     .presence {
       margin-bottom: 0;
@@ -333,7 +334,7 @@
   padding-bottom: 72px;
 
   @include media-2 {
-    padding-bottom: 48px;
+    padding-bottom: 36px;
   }
 
   &__container {
@@ -387,7 +388,7 @@
   &__content {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.62;
     letter-spacing: normal;
   }
 
@@ -419,6 +420,10 @@
 .comments {
   &__list {
     padding-bottom: 72px;
+
+    @include media-3 {
+      padding-bottom: 30px;
+    }
   }
 
   &__title,
@@ -501,11 +506,19 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
+
+    @include media-4 {
+      display: block;
+    }
   }
 
   &__textarea-wrapper {
     margin-right: 30px;
     flex-grow: 1;
+
+    @include media-4 {
+      margin: 0 0 18px;
+    }
   }
 
   &__textarea {
@@ -519,6 +532,10 @@
   &__input-item {
     &:not(:last-child) {
       margin-bottom: 24px;
+
+      @include media-4 {
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -552,6 +569,10 @@
     width: 260px;
     height: 54px;
     padding: 0 18px;
+
+    @include media-4 {
+      width: 100%;
+    }
   }
 
   &__checkbox {
@@ -607,7 +628,7 @@
 }
 
 .similar-products {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 
 
   &__slider {
@@ -643,6 +664,14 @@
     }
   }
 
+  &__pagination {
+    display: none;
+
+    @include media-4 {
+      display: block;
+    }
+  }
+
   .arrow-btn {
     top: 25px;
     border: 1px solid $silver-600;
@@ -657,9 +686,13 @@
     right: 0;
   }
 
+  .swiper-pagination-bullets {
+    bottom: 5px;
+  }
+
   .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border: 1px solid $silver-600;
 
   }
@@ -672,10 +705,20 @@
   .product-card {
     &__name {
       height: 59px;
+
+      @include media-4 {
+        margin-bottom: 40px;
+      }
     }
 
     &__info {
       padding-top: 0;
+
+
+      @include media-4 {
+        margin-top: -7px;
+        padding: 0 11px 12px;
+      }
     }
   }
 }

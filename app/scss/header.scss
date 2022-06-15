@@ -312,10 +312,6 @@
 .user-nav {
   display: flex;
 
-  @include media-2 {
-    margin-right: -6px;
-  }
-
   &__item {
     &:not(:last-child) {
       margin-right: 10px;
