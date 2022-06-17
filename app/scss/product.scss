@@ -630,7 +630,6 @@
 .similar-products {
   padding-bottom: 24px;
 
-
   &__slider {
     position: relative;
 
@@ -694,7 +693,6 @@
     width: 13px;
     height: 13px;
     border: 1px solid $silver-600;
-
   }
 
   .swiper-pagination-bullet-active {
@@ -713,7 +711,6 @@
 
     &__info {
       padding-top: 0;
-
 
       @include media-4 {
         margin-top: -7px;
@@ -734,6 +731,17 @@
     height: calc(100% - 108px);
     border-radius: 15px;
     background-color: $white;
+
+    @include media-1 {
+      margin: 30px 40px;
+      height: calc(100% - 60px);
+    }
+
+    @include media-4 {
+      margin: 0;
+      height: 100%;
+      border-radius: 0;
+    }
   }
 
   &__close-btn {
@@ -741,11 +749,21 @@
     top: 32px;
     right: 32px;
 
+    @include media-3 {
+      top: 10px;
+      right: 10px;
+    }
+
     &.close-btn {
       &::before {
         width: 32px;
         height: 32px;
         background-color: rgba($black, 0.15);
+
+        @include media-3 {
+          width: 18px;
+          height: 18px;
+        }
       }
 
       &:hover {
@@ -760,6 +778,10 @@
     padding: 60px 60px 160px;
     position: relative;
     height: 100%;
+
+    @include media-3 {
+      padding: 154px 8px;
+    }
   }
 
   &__slide {
@@ -774,14 +796,23 @@
   }
 
   &__slider-btn {
-    top: 50%;
+    // top: 50%;
+    top: calc(50% - 9px);
 
     &--prev {
       left: 60px;
+
+      @include media-3 {
+        left: 0px;
+      }
     }
 
     &--next {
       right: 60px;
+
+      @include media-3 {
+        right: 0px;
+      }
     }
   }
 
@@ -789,6 +820,10 @@
   .swiper-pagination-bullets {
     &.swiper-pagination-horizontal {
       bottom: 90px;
+
+      @include media-4 {
+        bottom: 107px;
+      }
     }
   }
 
@@ -797,6 +832,10 @@
     height: 10px;
     border: 1px solid $silver-600;
 
+    @include media-4 {
+      width: 12px;
+      height: 12px;
+    }
   }
 
   .swiper-pagination-bullet-active {
